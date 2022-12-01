@@ -4,7 +4,12 @@ require "json"
 
 class TicketingController < ApplicationController
   before_action :authorize_request,
-                except: %i[generate_ticket pay_ticket update_vehicle_type]
+                except: %i[
+                  generate_ticket
+                  pay_ticket
+                  update_vehicle_type
+                  update_ticket_area
+                ]
   def generate_ticket
     params = request.query_parameters
     vehicle_type = params["vehicle_type"]
@@ -104,6 +109,24 @@ class TicketingController < ApplicationController
         select_ticket.type = data["type"]
         select_ticket.save
         render json: { message: "type ticket berhasil diupdate" }, status: :ok
+      rescue StandardError => e
+        render json: { message: e.to_s }, status: :not_found
+      end
+    end
+  end
+
+  def update_ticket_area
+    data = ActiveSupport::JSON.decode(request.body.read)
+    if data["place_name"] == ""
+      render json: { message: "place name must be filled" }, status: :not_found
+    elsif data["id_ticket"] == ""
+      render json: { message: "id ticket must be filled" }, status: :not_found
+    else
+      begin
+        select_ticket = Ticket.find(data["id_ticket"])
+        select_ticket.ticket_place = data["place_name"]
+        select_ticket.save
+        render json: { message: "Area berhasil diupdate" }, status: :ok
       rescue StandardError => e
         render json: { message: e.to_s }, status: :not_found
       end

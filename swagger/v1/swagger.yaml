@@ -1,0 +1,65 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/get-ticket":
+    get:
+      summary: generate_ticket ticketing
+      parameters: [
+        {
+          "name": "vehicle_type",
+          "in": "query",
+          "type": "string",
+          "default": "car",
+          "required": true
+        },
+        {
+          "name": "place_name",
+          "in": "query",
+          "type": "string",
+          "default": "Kemang",
+          "required": true
+        }
+      ]
+
+      responses:
+        '200':
+          description: successful
+  "/pay-ticket":
+    post:
+      summary: pay_ticket ticketing
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "id_ticket"
+          description: "Ticket id"
+          schema:
+            type: object
+            required:
+              true
+            properties:
+              id_ticket:
+                type: string
+      responses:
+        '200':
+          description: successful
+  "/update-vehicle-type":
+    put:
+      summary: update_vehicle_type ticketing
+      responses:
+        '200':
+          description: successful
+  "/update-ticket-area":
+    put:
+      summary: update_ticket_area ticketing
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000

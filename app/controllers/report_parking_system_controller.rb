@@ -5,8 +5,8 @@ class ReportParkingSystemController < ApplicationController
   end
 
   def report_all_areas
-    @listTicket = Ticket.collection.aggregate([{"$group" : {"_id" : {"ticket_place" : "$ticket_place"},"SUM(price)" : {"$sum" : "$price"}}},{"$project" : {"ticket_place" : "$_id.ticket_place","SUM(price)" : "$SUM(price)","_id" : NumberInt(0)}}],{"allowDiskUse" : true})
-    render json: { message: "success", result: listTicket }, status: :ok
+    #@listTicket = Ticket.collection.aggregate([{"$group" : {"_id" : {"ticket_place" : "$ticket_place"},"SUM(price)" : {"$sum" : "$price"}}},{"$project" : {"ticket_place" : "$_id.ticket_place","SUM(price)" : "$SUM(price)","_id" : NumberInt(0)}}],{"allowDiskUse" : true})
+    #render json: { message: "success", result: listTicket }, status: :ok
+    render json: { message: "success" }, status: :ok
   end
-
 end
