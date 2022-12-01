@@ -1,0 +1,14 @@
+Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Defines the root path route ("/")
+  # root "articles#index"
+  # Routing for generate and update ticket data
+  get "/get-ticket", to: "ticketing#generate_ticket"
+  post "/pay-ticket", to: "ticketing#pay_ticket"
+  put "/update-vehicle-type", to: "ticketing#update_vehicle_type"
+
+  # Routing for generate report
+  post "/report-areas", to: "report_parking_system#report_areas"
+  post "/report-all-areas", to: "report_parking_system#report_all_areas"
+end
