@@ -11,6 +11,7 @@
     - [x] Update vehicle type :tada:
     - [x] Pay ticket :tada:
     - [x] Update ticket area :tada:
+    - [ ] Show all list ticket
     - [ ] Install api documentation Swagger
         - https://betterprogramming.pub/documenting-ruby-on-rails-apis-using-rswag-gem-48c92e11ea30
         - https://github.com/rswag/rswag
