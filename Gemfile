@@ -44,6 +44,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec-rails' # ignore if already set up in project
   gem 'rswag'
+  gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :development do
