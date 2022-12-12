@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   # Routing for generate and update ticket data
   get "/get-ticket", to: "ticketing#generate_ticket"
+  get "/get-all-tickets", to: "ticketing#get_all_ticket"
   post "/pay-ticket", to: "ticketing#pay_ticket"
   put "/update-vehicle-type", to: "ticketing#update_vehicle_type"
   put "/update-ticket-area", to: "ticketing#update_ticket_area"

@@ -9,7 +9,14 @@ class TicketingController < ApplicationController
                   pay_ticket
                   update_vehicle_type
                   update_ticket_area
+                  get_all_ticket
                 ]
+
+  def get_all_ticket
+    tickets = Ticket.all()
+    render json: { tickets: tickets }, status: :ok
+  end
+
   def generate_ticket
     params = request.query_parameters
     vehicle_type = params["vehicle_type"]
