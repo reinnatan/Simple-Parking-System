@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "b65e81d8-0e0b-48e1-87b3-648a49ac022c",
+		"name": "ticketing-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create New Ticket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://[::1]:3000/get-ticket?vehicle_type=car&place_name=Sumarecon Cakung",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "3000",
+					"path": [
+						"get-ticket"
+					],
+					"query": [
+						{
+							"key": "vehicle_type",
+							"value": "car"
+						},
+						{
+							"key": "place_name",
+							"value": "Sumarecon Cakung"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create New Ticket",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/get-ticket?vehicle_type=car&place_name=Sumarecon Cakung",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"get-ticket"
+							],
+							"query": [
+								{
+									"key": "vehicle_type",
+									"value": "car"
+								},
+								{
+									"key": "place_name",
+									"value": "Sumarecon Cakung"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c0c9c409a8d00b518c08f2d3e9515bd2\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "3ecae164-42c5-4f23-a890-76c3b8ded573"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.182793"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=6.31, start_processing.action_controller;dur=0.11, process_action.action_controller;dur=145.94"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"parking_district\": \"Sumarecon Cakung\",\n    \"ticket_id\": \"638861aa4e97da1bb2c10418\",\n    \"date_enter\": \"01-12-20\",\n    \"time_enter\": \"15:11:22\",\n    \"qr_code\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaElEQVR4nOVU\\nvYrCQBCeTYS1uURLIUQhT2CXgJC8yvkEMTZ22bOy8ecJ7j3sEgho5xMI8Vi4\\n1qQyYJxbyxzkmGvvpvvYj9n5vhk+DZulQbP+AWasW7NAlinTSPwhJp1479kc\\nryR+rQGapgyBCep8clZg9As91o53fnpvYP0BnTKtbEDaPBcWDK58NK1Yj8RH\\nvIEBB+HjgzZ/wQ6a69kp7Gh+vt28mGVTYBGJL42jDF3rJdAFzZ/IH9qcz5O7\\nQeJ7625drCpz0abvG87KcVZWDm7ZB4k/gpO+Di6xR+yfG+PJkuMckbYvf77N\\n4r18r4CmF2Bcx3F9MYn+58ZJ7x0toyL6X0fuQDnDkrzt/ybmInX6icOCUUji\\n3w2/3lTnAlv1NbHKB13wpwQaX+WDfJ1B6BL9VPkw6K+UncT7V5Xhwrm6qSDn\\ng5mcN2CV1HxQm5osj5+0/iofQJ2o8Il6n/kQunmcWLR9/Wn8BUpSkOLaf3LB\\nAAAAAElFTkSuQmCC\\n\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Vehicle Type",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_ticket\":\"63876cb07bc2899dbe968811\", \"type\":\"car\"}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/update-vehicle-type",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"update-vehicle-type"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Vehicle Type",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id_ticket\":\"63876cb07bc2899dbe968811\", \"type\":\"motorcycle\"}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/update-vehicle-type",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"update-vehicle-type"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"0bb4711affbb379b6348d651c5ead1d6\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "ab8cc953-2044-47a7-9505-3dfbfdf017b7"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "7.583726"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=1.16, start_processing.action_controller;dur=0.16, process_action.action_controller;dur=7524.43"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"type ticket berhasil diupdate\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Pay Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_ticket\":\"63883dce4e97da0d65272b72\", \"type:\"car\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://[::1]:3000/pay-ticket",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "3000",
+					"path": [
+						"pay-ticket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Pay Ticket",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id_ticket\":\"6388541d4e97da13daea9773\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/pay-ticket",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"pay-ticket"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7714ad7e9c80e00b8a90eeafd3d45093\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "3ec5dab9-5459-43dc-8389-c47f9e9dd45f"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.202404"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.21, process_action.action_controller;dur=21.94"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"ticket berhasil dibayar\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Report area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/report-areas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report-areas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ticket Area",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_ticket\":\"63876cb07bc2899dbe968811\", \"place_name\":\"Bandung\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://[::1]:3000/update-ticket-area",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "3000",
+					"path": [
+						"update-ticket-area"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Ticket Area",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id_ticket\":\"63876cb07bc2899dbe968811\", \"place_name\":\"Bandung\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/update-ticket-area",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update-ticket-area"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cdc4673347727c60e234734329f26936\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "f4cff839-8414-47da-ad99-4534d5480eee"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.118200"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=1.12, start_processing.action_controller;dur=0.16, process_action.action_controller;dur=21.24"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Area berhasil diupdate\"\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:3001/get-all-tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/get-all-tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"get-all-tickets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:3001/get-all-tickets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/get-all-tickets",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"get-all-tickets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6b6567913bd289f0beb887492d19539\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "ea3e6656-4a61-4083-8420-e5c0e7ca82cd"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.039219"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.24, process_action.action_controller;dur=28.77"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tickets\": [\n        {\n            \"_id\": {\n                \"$oid\": \"63876a487bc2899c171bbda8\"\n            },\n            \"created_at\": \"2022-11-30T14:35:55.854Z\",\n            \"date_checkout\": \"2022-12-01 11:19:07 +0700\",\n            \"date_entrance\": \"2022-11-30 21:35:52 +0700\",\n            \"id\": {\n                \"$oid\": \"63876a487bc2899c171bbda8\"\n            },\n            \"price\": 26000,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABHElEQVR4nO1T\\nwWqDQBR8GwvrSXstxHYhP2FB0D8qkoun6tJLbskP5F82IOhPFDboB2RzUnDZ\\nmmMCgWl7zRwWBua9HYY3C3eNBV3jwf/NLWNR7gvDWIXNl452cc/cBP5n/PmZ\\n6CBgf95W9bD/C0yW4PpwsEZ+V6kG9ZIRceHYE6b3nNPbog6dq9B8RKlWLEPz\\np7F27xNTb6B+lyZf6nhqj5jeOll/crHPO3C/K4RkXbcR9/zecq7zwT7H6P3Q\\nmFCbwv6JNbNzG5VoPtRGrzGdD+B+r4q18fsSzX/u18o0+kyo/7lf+4ICvrzn\\n94Yb364lyQy8zwsC7p0Izp/oIxPBKEB9OHjSvKyVBvVzv0zYROUv+hUOy1yh\\n/Xrwv/MfOa194qyklu8AAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T04:19:09.957Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63876ac17bc2899c796032ae\"\n            },\n            \"created_at\": \"2022-11-30T14:37:54.262Z\",\n            \"date_checkout\": \"2022-12-01 11:44:53 +0700\",\n            \"date_entrance\": \"2022-11-30 21:37:53 +0700\",\n            \"id\": {\n                \"$oid\": \"63876ac17bc2899c796032ae\"\n            },\n            \"price\": 70000,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABHElEQVR4nO1T\\nwWqDQBR8GwvrSXstxHYhP2FB0D8qkoun6tJLbskP5F82IOhPFDboB2RzUnDZ\\nmmMCgWl7zRwWBua9HYY3C3eNBV3jwf/NLWNR7gvDWIXNl452cc/cBP5n/PmZ\\n6CBgf95W9bD/C0yW4PpwsEZ+V6kG9ZIRceHYE6b3nNPbog6dq9B8RKlWLEPz\\np7F27xNTb6B+lyZf6nhqj5jeOll/crHPO3C/K4RkXbcR9/zecq7zwT7H6P3Q\\nmFCbwv6JNbNzG5VoPtRGrzGdD+B+r4q18fsSzX/u18o0+kyo/7lf+4ICvrzn\\n94Yb364lyQy8zwsC7p0Izp/oIxPBKEB9OHjSvKyVBvVzv0zYROUv+hUOy1yh\\n/Xrwv/MfOa194qyklu8AAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": null,\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T04:44:57.487Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63876c867bc2899d82f817b7\"\n            },\n            \"created_at\": \"2022-11-30T14:45:27.256Z\",\n            \"date_checkout\": \"2022-12-09 20:10:43 +0700\",\n            \"date_entrance\": \"2022-11-30 21:45:26 +0700\",\n            \"id\": {\n                \"$oid\": \"63876c867bc2899d82f817b7\"\n            },\n            \"price\": 428000,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABHElEQVR4nO1T\\nwWqDQBR8GwvrSXstxHYhP2FB0D8qkoun6tJLbskP5F82IOhPFDboB2RzUnDZ\\nmmMCgWl7zRwWBua9HYY3C3eNBV3jwf/NLWNR7gvDWIXNl452cc/cBP5n/PmZ\\n6CBgf95W9bD/C0yW4PpwsEZ+V6kG9ZIRceHYE6b3nNPbog6dq9B8RKlWLEPz\\np7F27xNTb6B+lyZf6nhqj5jeOll/crHPO3C/K4RkXbcR9/zecq7zwT7H6P3Q\\nmFCbwv6JNbNzG5VoPtRGrzGdD+B+r4q18fsSzX/u18o0+kyo/7lf+4ICvrzn\\n94Yb364lyQy8zwsC7p0Izp/oIxPBKEB9OHjSvKyVBvVzv0zYROUv+hUOy1yh\\n/Xrwv/MfOa194qyklu8AAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-09T13:10:43.524Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63876cb07bc2899dbe968811\"\n            },\n            \"created_at\": \"2022-11-30T14:46:09.374Z\",\n            \"date_checkout\": \"2022-12-09 20:11:44 +0700\",\n            \"date_entrance\": \"2022-11-30 21:46:08 +0700\",\n            \"id\": {\n                \"$oid\": \"63876cb07bc2899dbe968811\"\n            },\n            \"price\": 428000,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABHElEQVR4nO1T\\nwWqDQBR8GwvrSXstxHYhP2FB0D8qkoun6tJLbskP5F82IOhPFDboB2RzUnDZ\\nmmMCgWl7zRwWBua9HYY3C3eNBV3jwf/NLWNR7gvDWIXNl452cc/cBP5n/PmZ\\n6CBgf95W9bD/C0yW4PpwsEZ+V6kG9ZIRceHYE6b3nNPbog6dq9B8RKlWLEPz\\np7F27xNTb6B+lyZf6nhqj5jeOll/crHPO3C/K4RkXbcR9/zecq7zwT7H6P3Q\\nmFCbwv6JNbNzG5VoPtRGrzGdD+B+r4q18fsSzX/u18o0+kyo/7lf+4ICvrzn\\n94Yb364lyQy8zwsC7p0Izp/oIxPBKEB9OHjSvKyVBvVzv0zYROUv+hUOy1yh\\n/Xrwv/MfOa194qyklu8AAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"Bandung\",\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-09T13:11:44.989Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63881b364e97daba7fc6f279\"\n            },\n            \"created_at\": \"2022-12-01T03:10:46.756Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 10:10:46 +0700\",\n            \"id\": {\n                \"$oid\": \"63881b364e97daba7fc6f279\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABHElEQVR4nO1T\\nwWqDQBR8GwvrSXstxHYhP2FB0D8qkoun6tJLbskP5F82IOhPFDboB2RzUnDZ\\nmmMCgWl7zRwWBua9HYY3C3eNBV3jwf/NLWNR7gvDWIXNl452cc/cBP5n/PmZ\\n6CBgf95W9bD/C0yW4PpwsEZ+V6kG9ZIRceHYE6b3nNPbog6dq9B8RKlWLEPz\\np7F27xNTb6B+lyZf6nhqj5jeOll/crHPO3C/K4RkXbcR9/zecq7zwT7H6P3Q\\nmFCbwv6JNbNzG5VoPtRGrzGdD+B+r4q18fsSzX/u18o0+kyo/7lf+4ICvrzn\\n94Yb364lyQy8zwsC7p0Izp/oIxPBKEB9OHjSvKyVBvVzv0zYROUv+hUOy1yh\\n/Xrwv/MfOa194qyklu8AAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T03:10:46.756Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6388339f4e97dacc23a3559a\"\n            },\n            \"created_at\": \"2022-12-01T04:54:55.854Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 11:54:55 +0700\",\n            \"id\": {\n                \"$oid\": \"6388339f4e97dacc23a3559a\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZElEQVR4nOVU\\nPWrDMBR+sgLO5GQNKLUhJ+imQEE+S07gpAew1SlLbXqA+h7ZaihEW08QiGpD\\nVsdZHIiiak2h8Lq2b3vo0+P7vvfj2dvw4Db+QU7IcGBj7VXEQ+FD+8Y6xRLf\\ntii88UDLDc2BZFh+l4Br7zd6Ol/kWDy9wqCE3SdYHB9NYrZQEZzJGIW3tj/k\\nnGbCXpH+KChikxKD8z8K7ndy817CDOc/zRx5gAV3X1B8WsE6oLKIOhR+m6na\\nxNPn5RmndzpaRk8Q0mKG00sf1/sAdmZZ4ervE65XKjptBa5fD6VigTik8wrn\\nZ5Nw2laTsBArFH5CRnDqax1Xdzi9OTeZb2Q/y3D9kpJm58aSCY5P3Qoy/ohe\\n7A/v33N3H9wkM1AU57+7D81xDgkH3Py4sY9KqFOic+y+s84fkB65vy60Pe5f\\nR8j9dTIvcjhf8RBX392HJrVbu0bOj7sPrjIDbP0/nX8BwkCd4g+jp1UAAAAA\\nSUVORK5CYII=\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T04:54:55.854Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"638836f74e97da07f4c6ab92\"\n            },\n            \"created_at\": \"2022-12-01T05:09:12.242Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 12:09:11 +0700\",\n            \"id\": {\n                \"$oid\": \"638836f74e97da07f4c6ab92\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABY0lEQVR4nOVU\\nMW7CQBCc8yHZTYAH2AKJF9AdUqTjLckHbFdUYEJDEzt5QJx3pMNSCn8ikg2W\\nKEOgsSXsxS1Kik2bXLe60Wpmbm4Muj4Grs8/mIWwHB/FUyIMFn5Am71jTbYm\\nHVj42kAdqF0IEXD5nd0kN36hpziVOuTiZYNhnCZbEI9PLqb2nXmLSvRZeKIS\\n3QrQ1DD9Sfe+Boma5/9+MTvTNIsxYvpPy9b5jkdFzPPzQVOYyp6wjyz8kKxc\\nvtVfZcLTS4EaNeq87Gme3gKpDbMzHzP323P14U2yU6R571Ws1hAb/eglPD+d\\nz5nZs2oZaZ/H53Vtu3h3VcbzXy5med/EjRj+fP9tvl/LRkkfOY9P1lVAhWey\\nefvbfqgCE0glz/+2H3BM4Srw8tPGvhOP64XIQ+5/lwdz0Fe7gN13q40TRQ4v\\nD63MjKa7rZK8/W0/1E2CF6vi5afth8GS4JXM/X96vgB26JviAhoLyAAAAABJ\\nRU5ErkJggg==\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T05:09:12.242Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"638838004e97da09058865d9\"\n            },\n            \"created_at\": \"2022-12-01T05:13:36.762Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 12:13:36 +0700\",\n            \"id\": {\n                \"$oid\": \"638838004e97da09058865d9\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZ0lEQVR4nOWU\\nPW7CQBCFZ71IpiKktGRkpJwg3VpCss+SC8RxGiq8Jg1NsHMB5xx0IFliO04Q\\nycZIlLGosIQ92RYlxaRNptrRfsWbv2fgdRhwHf8gZ6zPpDrMN8wg8Q6uIQWY\\nmViT+NYAjFw4AZNUfUyKSfqLemyW5AGV5x3wUEwyQJqekvltrdp9w4YkHvFc\\nRdMcPOxo+lMF7ysYNL05jT/dl6FyQlUExP7snMjvZeAuafV2oozPBU5zmh7n\\nhtmP/VG14JLEj0GYS89OhT2g6XlOrDjmnVmGJP4SCP4UHWKX0+o9vrJNvGiS\\ntf3z/7f8BfVymvtduSfxE1BV5FtSP0i87jzDdZG4FW3fRt2mSJtxAIy2b1WM\\nd7XYxgi0+Wp/uKDvSgW0eWl/OJxgOxTwQPUHa6jcT8Zp9eowa++4NC2a/+i4\\nZPAh74+S6g9tDZ6+r4zqD/x2lb8hcX+0P0Bg2jMA6v3+4fwLZ8Ob4j3J2ykA\\nAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T05:13:36.762Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6388382e4e97da09058865db\"\n            },\n            \"created_at\": \"2022-12-01T05:14:23.001Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 12:14:22 +0700\",\n            \"id\": {\n                \"$oid\": \"6388382e4e97da09058865db\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbUlEQVR4nOWU\\nsWrDMBCGT1bBXhqnY8CtDX2CbDEEnK3P0b5A7UyeWjlTlzrOCzjP0S0FQ7T1\\nCQKWbchYt1lsiK1qTaFwXdt/O/iQ7vSffk2eSoNT/YOaEMOBlgxfiYbibbnp\\nhlDWuqxRfKdBKUz4BMKw/Tmrl2nyi3lErIOP5WkPcB9kKUhcP4LMrMPSLdQT\\noXgpm2ww2TJP9rj+E07N2WXcni1wvAzcurXnPPdx/tY8Wy13V+DGKN46NF4N\\n9DHMcP1UKc+WoSifKEPxx9uwKyMrmVgDpL+cPt/se13McfxajqIGIpfi5q0+\\njCoyHHNj/XT/t5o0ltnsijdRoHiv53rRegymuPPzj/CY8J0ZlLh9c1JOaq/y\\nOcHtWx40cG7YkQScvyofJBtXwAHnl8qHasEhmcAdNh/gQXffCcXNq+RebLL1\\ndoTLH6Xcb6/ZeM+w+bDX9E4YeYrNh1Hc5iuJ3B+VD7T2bGUW7v/+6foLKZyh\\n4k9q2toAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T05:14:23.001Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6388395f4e97da0a2b3f57c8\"\n            },\n            \"created_at\": \"2022-12-01T05:19:27.776Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 12:19:27 +0700\",\n            \"id\": {\n                \"$oid\": \"6388395f4e97da0a2b3f57c8\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABa0lEQVR4nOVU\\nMWrDQBDc0wnkJpZagYwFfoG7CwSsryQvUOzGVXxS5SaSX6C8w10EAavzCwx3\\nskBlYqexwNLlUjoksGmT7ZadW2ZuhzHUZRlwWf+gJ6RnHoIqzomBwg/VczuM\\nILTUGwrfGqBkABkQjuXn2xvv+As9VczMEIunHbi8OGegcHwkCSCEQdkQB4VX\\n6rTn45pPVIfjvyrkY69NGjNG4c3buX9kdFqIEIVv0qWKUi+z3ASFH5E5pHMR\\nsgrHZ8eLyo7INKcct79jmr9YMa+P+//Zsk0s2m3lFOfPhGnz+HFDcXrbRU+E\\nhXe18L6ff+3FkdWD+7zMZYnTm+RutLnpW8j9O84sGYj3dY3z22iWek9rugiu\\ncX4TfdZy8IlC3lfngwB4gQJw99L5UEvbdRjcYfMBVmP6SihOr67BYWmSjYfz\\nv649B5GNqx/nF/1nPjisLfUTbD5Uyp44W+R9dT4M1Uk8MEDz/7v9Bx9Jm+Jb\\napdjAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T05:19:27.776Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6388398e4e97da0a2b3f57ca\"\n            },\n            \"created_at\": \"2022-12-01T05:20:14.774Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 12:20:14 +0700\",\n            \"id\": {\n                \"$oid\": \"6388398e4e97da0a2b3f57ca\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABa0lEQVR4nOVU\\nMW7CQBDc8yGZBuPW0jkg5QV0R2W6vCPJA3Cchiq+pKIC8gF4Rzpc4c4vQPLZ\\nJ1HGkAYX5nKURIm0aZOpbrSj06x2NJa+hAWX+AeckHZrAcRNiIXS9/Tai0lZ\\n2LpC6RsLSsH7SyAC669Ppuzwi32k+TnE6ukJYDzJl6BxfiQZsY+5X9TERem1\\nPpZXtYJAn3D+F6mMR+DUrReU3heDnrB1lOYhSr+Tbbh/k1e2N8P5cbh0eVBx\\nhfPjRRnr3OSHhAqcnxm/Fonvcuag9NsoyclRPWUywuXTDdQh61k1xe3bVKl3\\n4tCJ2ffzr1yt9rZImyKRBUofiHQbP6iuRv6fjydUpPme7HB58x+nnnt+D3F5\\nK2dBKwyCZ428r+kHTacKUsDdy/SDrHjtcrjD9gPtDu13QnH7GvS7a7baMFz+\\nDfLbUSMG6sf5BT/3w+t8U4CpCGQ/gDPw3Ax5X9MPLLSpiRza/9/lnyG+luJw\\n/FbTAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T05:20:14.774Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63883a4d4e97da0a96511273\"\n            },\n            \"created_at\": \"2022-12-01T05:23:25.615Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 12:23:25 +0700\",\n            \"id\": {\n                \"$oid\": \"63883a4d4e97da0a96511273\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABa0lEQVR4nOWU\\nwWqDQBCGZzWgl+peBYNCniC3DQTss+QJoqeemjUP0DQP0LxHbwqCe/MJAhqF\\nXKOnCNXt9phCYHpqoXP74WP3n2Hm1+RtaXBb/0ATYk5t4ncp0VC8J5O8zo/c\\nkBcUP2gwpf2MAuFYfx/PRjr+oB9/F3oUy+sj5CdBTiBxfiryuIhzF3pCUbyU\\nV3gLdR7IEedfmuVKDFxMI9w8OYN9Xu6e4IDiz1QAzA3VNUfxi7b1LeHQfrlC\\n8U1s1tUm60R5p7/vOpRgpQEHH8d7NqkiKDfX9AXFZ6EM4mQi7WWH4h2eNnJz\\njOaZheJ9K+h3sXsoAty9NNt0Rtk5TiqO4t2HpyEynAurkfsDRT6YTUsWOD91\\ne13u39291HHvq3zIVswHcff/W63ywbcKWDPYYvOh7Oa1TWCNvfeBFsPIStz+\\nq/JUp6/FBOdfjUWd/CxOnBM2H/Q2KdcMuT8qH1yLfbnifyL/f1V/Ai/3nOKo\\n5lWKAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": null,\n            \"type\": \"motorcycle\",\n            \"updated_at\": \"2022-12-01T05:23:25.615Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63883b6f4e97da0b779c010e\"\n            },\n            \"created_at\": \"2022-12-01T05:28:16.081Z\",\n            \"date_checkout\": \"2022-12-09 23:03:49 +0700\",\n            \"date_entrance\": \"2022-12-01 12:28:15 +0700\",\n            \"id\": {\n                \"$oid\": \"63883b6f4e97da0b779c010e\"\n            },\n            \"price\": 1010000,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbUlEQVR4nOVU\\nwWrCQBDdcQVzMnoUTBPwC7xFCMSb39H+QDVePHUTe/FSqx9g+ysGCsmtX1BI\\nSMBrYi8RuplujwrC9NrObXYfw5s3b6aB59Fg5/EPcgDN2pygEUKDhDdxL8Wk\\n/9DCgoSXP29h5jPwqfyywk69X/SjwOYNFc9rNujE7I4hjU8K414ZGf4JOiQ8\\nYpU/j7jvYk3UJzbLSgqQNP0PchHetJLXaEDTv78MnRLy29nbC41PYWdYWe3Y\\nOZLw+SYGMWHMDWn9mrXLIEgeA5fWL9uuEhSmHBPrG96QeyHM0aXNK7nXZbdC\\n/xTS9LSgdNpxc6e7Hs1vhh6li69ZmdD0Z9OhEexBaM0r/5f55wqFxo6sR+OT\\ntF1rW/EuXqt3kav7kEzf+yzmxPniPl0PPwqb0fyjbO8sW1xAuqbu++FJM4KK\\nuL8q5LzKd7pB84NqMxMj7tmcVl/dBxlEEldE/6j7YNbq+Ngmmf/fzb8Blcqi\\n4kD2gv4AAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"TamanAnggrek\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T16:03:49.313Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63883ba44e97da0bcaa47ba7\"\n            },\n            \"created_at\": \"2022-12-01T05:29:09.335Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 12:29:08 +0700\",\n            \"id\": {\n                \"$oid\": \"63883ba44e97da0bcaa47ba7\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZklEQVR4nOVU\\nsW6CUBS9j2dClwKrCSi/wIaJCWz+h/0A0ckJH0xOhf5A+yuSmMjmL4CSMIpM\\nZcDb19EmJrdre7aTnLx37rk3R8F7KHCPf8AZexq0eRVnTCHpx7jrRWcHKjYk\\nfa8A6rNCAyao/izRTeNfzFOFLgRUPb8BX0E2AqT5KZk/jJLpvGMGSY/4Wbx3\\nFXh4o/lPc37xC60bxLQ8G8duXW+pFwFJb8dH0A/wdp28kvT7xbpfZeVF39P8\\njEd5bXgyTC5IeqtxuiazDNfUSPqKJYCzYrMtV7Q8cc2Ta604nDbvmG97Q+2F\\naj547wcvnpe1yOwwK0+0/NujdfrOh/p+6KLly2OoafdmyWWdI3PhT2j3dk5w\\niuuCYUXbr+yHwyhnIgfavmQ/QOBB6sKc2g/QAl4Yp80rYX9ElaaatPuXKK4b\\nM3V6Qe2HoQD7ZXceUfsBwmyfqtXD/++47AceoRkC3f/f5V8uNJzinCZKlgAA\\nAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"Taman Anggrek\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T05:29:09.335Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63883dce4e97da0d65272b72\"\n            },\n            \"created_at\": \"2022-12-01T05:38:22.733Z\",\n            \"date_checkout\": \"2022-12-01 14:42:08 +0700\",\n            \"date_entrance\": \"2022-12-01 12:38:21 +0700\",\n            \"id\": {\n                \"$oid\": \"63883dce4e97da0d65272b72\"\n            },\n            \"price\": 10000,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaUlEQVR4nOWU\\nMW7CMBSGnxMkdyJhREoEUk/AlkiR4CzpAYqZmIrL1KVJegHuwUakSHjLFQxE\\nyhpgASnBNSNISK9TK/VNfvIv+/PT799Qt2XAbf2DnpCnViLgkBIDpe+pVb0f\\nuZyqCqVvDCDRwLSBcCyfDOnm8oP3DKOzsrF68wLZcb3ZgsLxbMjI5yKAM7FR\\neqVOJb9CqQuOXz3JmEkQ7gTHY3v9cd6Kp7BA6QNIZTKA2fJKhZnPdhiwVZ2A\\nE+L4E9F8WnQi5IP9u76J93pRA/Rx+l0ldp2l20zTCKV3bc+d0PJ9HRxw/K9W\\nWUEz87M20m8DUMyZ50Pcfyl5Xi9oAeeUo/TOcV+8fKgIntH+8S1WhNDF8UhL\\nQZv6HWXiztf5kIVix8Wj++96nQ9960QqD+bYfJAHUBaBMfa/m5FoIi/D+V9X\\nlzHK8wDHr8dSfMWOBtti86HHvYytkP7R+QBv4IDX438i/3+1/waacJni8Ed7\\n+wAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"PIK\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T07:42:09.297Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6388541d4e97da13daea9773\"\n            },\n            \"created_at\": \"2022-12-01T07:13:34.560Z\",\n            \"date_checkout\": \"2022-12-09 20:08:39 +0700\",\n            \"date_entrance\": \"2022-12-01 14:13:33 +0700\",\n            \"id\": {\n                \"$oid\": \"6388541d4e97da13daea9773\"\n            },\n            \"price\": 985000,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABYklEQVR4nOVU\\nsW7CMBA9x5XM1LAiOTgSX9AtW9j6HagfUJLuxKgLE0l/gP9gI1O98QVICVhi\\nDXSJJYLxSqVK17W97aTz03vPd8+z9+XBff2DnpBe4I91URIPNS/sBs5msGe2\\nQc13HuiZGvWBSCy/6qMtm1/o4VMlhth5eoWRB2QPFsenJuOuYRwM6aPmrW2h\\nMAcZ2yvSHwU2CzLS4fw/domeGb2CEc7/8LyFr8XlpXVPUH4W0cWOIX/mZxz/\\n0+IoPh2lEqe3KiI+ScL3PEbu27LshgpmTzUOHyYZfWtpCgL3XyRfhNPtQLIS\\n56cgSZ0lNCBxivNnueUFK/cx0n96anW2Fvma/6Dve1+og4SHea/G8ammUZAy\\nM7dIfJcP1UoxqSjOf5cP/JSYJgLk/ngQ+rm2pF5i751KE+ct8n5d6dds5/vI\\n+3UyTQosjSgO3+XDcb7Z2Y3B7Y/LB/4IQgIS/0/3N3wMpOLG0s6HAAAAAElF\\nTkSuQmCC\\n\",\n            \"ticket_place\": \"PIK\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:08:39.302Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63885f6c4e97da18bdf8f733\"\n            },\n            \"created_at\": \"2022-12-01T08:01:48.717Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 15:01:47 +0700\",\n            \"id\": {\n                \"$oid\": \"63885f6c4e97da18bdf8f733\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABcElEQVR4nOWU\\nT2rCUBDGZxLBrJJshVcT8ATZJSDoznPUHsDYbrppY1y50egB6lkSEJJLCPnz\\noNvYbhIwvmarIEy37ew+3g9m5s3MJ4nrkOA6/oFGVFBP+DJCicQbIpQzB9yu\\nKEl8I8FZ7cIecEGt70EO2dcv+vksbXCpvHyBpg98D4JWT4ZjNk2cvEadxAtR\\nHdSaw0hcaPVvE0OyU6g7S9q8cgtm2mCtpS6JZx8KBhVsbWdD4lMUhuf0yuhA\\nqwe+osYP5ZdYXpB4rtrcn2S6zVTavMqkCFbsTcFnEm8GnnmaFxIUtH7hacUw\\n6GgVu/N+o499q9nUdR5lOYkfPiogXgfe5F7+G51qIi67sLUM2r6Zy8jc+dxN\\nkLZvxWUErn30BRD3DZWzPzYWCdDm1fpDc4pRt2FK9Qd5jecZyrR+2zC/K76L\\nezT/aSPytOG7RdzP1h8MI4xRSfdUf+Dtlc0Fv5v/Srf+wFy7/UxGu98/rX8A\\nf+iU4oopQ58AAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"Sumarecon Bekasi\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T08:01:48.717Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"638860664e97da19cf5e668a\"\n            },\n            \"created_at\": \"2022-12-01T08:05:58.841Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 15:05:58 +0700\",\n            \"id\": {\n                \"$oid\": \"638860664e97da19cf5e668a\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZUlEQVR4nOWU\\nsWrCYBDH7xLhczJ2FKIRfIkIQrr5HPUJjJOLTdIuLrW+QO1zdEtA6PcSQqIB\\nRxO7GEi8xtKhCpab29v+5Jfj7n/fnULnocB5/AONWC2wGrkBKizeIF8kmf4g\\nKGHxhQLhwqrcA7rs+j7870nw+MYO20Murx5B3NCqBcSrJ8LbRiLbgwzrLJ7o\\nsG3aS7DoyKs/xWzj9xYBzFl8BSyYS7jr44jFh69eXDPfZ5nqsvju2upRv6GI\\nvMbzsxUAeqqXXuvvQheJGdK4MtFwzctva/EQMu+NmT8yUnicwl4Qb145aR1X\\nxC9j4PXb8dLiqWttPK7/AwlIq5lg+g81q/xFoJ1f+X6hy/1t07hw5WkFeO8T\\ntGloU8zOr89NtS51Hl/eh+2uXBmT6Wd5H3TIthoy338ZK0U2nw9LXj2nQN9w\\nAfbc+xBPnGgkf8n3U5f3wRgFG8dh9vvlP+mOr/Pm9af1J12WlOInzL21AAAA\\nAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"Sumarecon Bekasi\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T08:05:58.841Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"638861464e97da1b258bcdcb\"\n            },\n            \"created_at\": \"2022-12-01T08:09:42.945Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 15:09:42 +0700\",\n            \"id\": {\n                \"$oid\": \"638861464e97da1b258bcdcb\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaklEQVR4nOVU\\nO27CQBCd8SLFDZ82EtiWOAGdC6SlyzlygsSkoQmxRY/hAEnOkQ5LkeyOE0Sy\\nwRJlMGlsifVkKYmENGmT6Ub7NDvvzbwx6DwMOI9/kCOavU6VGREaLLxNq5xu\\nuvdXtGfhlQFiH/UtQJ/bX+W72eYXfHZBbFtcvKhhGKKuT7x+MhypbdyFCjss\\nPFEpfBdAUs3UJ8msCpqoePqLekCemc7iPk9/B9Y4l/mjl7+w8HkxEWNwvlbd\\nA0//VlSFQdocRTy+xyXpL5xZKHl8lYcwTWzFrS8KgoVMDwPJm5d6QvHwhuEq\\n4unZeC17n2YatOWY5xevTWEMXvnO0x/AbSzAeR45l95/5Bgc7zzaRNe8ftKp\\nPDl9SRf/P8/1faD5WvmJ4Omv74MKCrF3gbc/eu37mamnkM25flcnf7lM/+rI\\nW8nODnu8fdA0tz4MbyeCV/90H0T8YSXM/dH3wa5dUZQ2u/+/m38DmZii4jvD\\nUAwAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"Sumarecon Bekasi\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T08:09:42.945Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"638861754e97da1b6b1f6f54\"\n            },\n            \"created_at\": \"2022-12-01T08:10:29.892Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 15:10:29 +0700\",\n            \"id\": {\n                \"$oid\": \"638861754e97da1b6b1f6f54\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZklEQVR4nOVU\\ny2rCQBS9kxHipmqXQtII/YLsIgiTb2k/oOrKTXVS1xq/wH5HdxMIdHb9goIv\\nyLLWbhJwvJ0upQh33d7dgcPJuWdOroPn48D5/APMWN2XurbImEPiB6ggidsb\\nF/ckvnFgN1BbCUxS/R3T+IdM3qdIPoMbKp+fwJ804Q6Q5mfNYm+gjKxYi8RH\\nLGFZrUDgiZiPLjYuIDO0/LmM3mcDeH69peXvT+owTeFhlC9J/HwcwjgquOod\\niPm/CUd3TTej7esdwlWjyqepoO1bW2joC3gcEfUDLP1WBV8vgvZeedIsbB8a\\nbkbLs9cPvXvlJUwMafksdNYKC0Ri/gZLMYs7T1nngt4vrFd9t/0Rt2l+tlL4\\nXG2v8aLeObb3IUe2lppT81ccke8joPXH1r5rndtPzOn3S3eWEfH/tVPMI5Ok\\nPq0Pds1qWB0PEafp2/uwu2oWpk7sj70PQVJ6rAzI/v8u/gaBXJ7iTR7BrQAA\\nAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"Sumarecon Bekasi\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T08:10:29.892Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"638861aa4e97da1bb2c10418\"\n            },\n            \"created_at\": \"2022-12-01T08:11:22.449Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-01 15:11:22 +0700\",\n            \"id\": {\n                \"$oid\": \"638861aa4e97da1bb2c10418\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaElEQVR4nOVU\\nvYrCQBCeTYS1uURLIUQhT2CXgJC8yvkEMTZ22bOy8ecJ7j3sEgho5xMI8Vi4\\n1qQyYJxbyxzkmGvvpvvYj9n5vhk+DZulQbP+AWasW7NAlinTSPwhJp1479kc\\nryR+rQGapgyBCep8clZg9As91o53fnpvYP0BnTKtbEDaPBcWDK58NK1Yj8RH\\nvIEBB+HjgzZ/wQ6a69kp7Gh+vt28mGVTYBGJL42jDF3rJdAFzZ/IH9qcz5O7\\nQeJ7625drCpz0abvG87KcVZWDm7ZB4k/gpO+Di6xR+yfG+PJkuMckbYvf77N\\n4r18r4CmF2Bcx3F9MYn+58ZJ7x0toyL6X0fuQDnDkrzt/ybmInX6icOCUUji\\n3w2/3lTnAlv1NbHKB13wpwQaX+WDfJ1B6BL9VPkw6K+UncT7V5Xhwrm6qSDn\\ng5mcN2CV1HxQm5osj5+0/iofQJ2o8Il6n/kQunmcWLR9/Wn8BUpSkOLaf3LB\\nAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"Sumarecon Cakung\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-01T08:11:22.449Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63898e55704c54217cb232a6\"\n            },\n            \"created_at\": \"2022-12-02T05:34:13.665Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-02 12:34:13 +0700\",\n            \"id\": {\n                \"$oid\": \"63898e55704c54217cb232a6\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZ0lEQVR4nOWU\\nP26DMBTGnwHJLM2fEYkCUk7QzZnIlnOUC5TSpRvQKVOSXoB7dAtTvPUESFiJ\\nxBjoRCTAdUeGSq9TK/UbbD3pk/17z9anybE0GOsf1ISYRG37/GtF+F15cC8r\\nL6CyRvl7DcQ2L7ZAEiyfTCiNftCP0BvLwfr1AbwJrWp1C8ovyMoOuBVdyQzl\\nl7I9Z1eY+HJAzofboV9K0uPmT7cMmqXxAhQ5f0Eqh0PcdhluPvO2SI9yRr0P\\nlP/am4uI9WKV4/qt5m0nCXVTP0L5l5ep2B0sEQsHxx8x+yGuZhz5P8uMLxJe\\n1EwkKP9twgr9zUfz683GkOsyYAWOH/YMpo2RwQLHAyHXE97dmwLHUwKzLs/e\\nq7RDbD6cnjZn4DqOX+UD3KztkEGAzQei3RUxQb6vkjsAdRjyfZVEeujIzthj\\n8+FETK95tL89b1SrfOh3x354z3E8Kh/cmp3S1k3+RP7/av0JOnue4vdGES8A\\nAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"Kemang\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-02T05:34:13.665Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63898e57704c54217cb232a8\"\n            },\n            \"created_at\": \"2022-12-02T05:34:15.483Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-02 12:34:15 +0700\",\n            \"id\": {\n                \"$oid\": \"63898e57704c54217cb232a8\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaElEQVR4nOWU\\nP27CMBTGnwkSmUJWJEuxlBOwBamSs3GO9gIQWDrVNlMmmgu0Z4klJLJxgkj8\\nicRYCguREtx0BAnpsbZve/bP8vesz1/LXFcLrusf9ITY9URDokkLxXsmhfch\\nOXTMAcXXv2t9zwUiH9C3eHlgHn/eoQmWty6wGANzwOD0bEg4mMb1tiQuijfm\\nvO+GS8nNBfc+rqbR+enDZjj97Pm1SHQ+KYsjil84GTXCOvDeHMX7E14IBU62\\nlDj9Ks6jV3YMahxPGzOoVLsZnaH4NazAWfkqhTHOD0nQTiAXoYWb17roctsH\\n8d2cQs0rRNvJuAjXd+6/6dlJVUmQT9OeRPE7GbCR3ekOkfMWxrbcoJSa4fTQ\\nroFTvFcGcP5p8qEw4UBm4GDzoYqWlgz2uP/S5MNGDPQXQfqnKV9yzzP07v5t\\n31NxexTutuh8SKCalewTmw/wVrIoLnB6mnzwJF87vEL6+S/3P48BmeIL0PDO\\nAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"Kemang\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-02T05:34:15.483Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6389987e704c542ac16b83d2\"\n            },\n            \"created_at\": \"2022-12-02T06:17:34.569Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-02 13:17:34 +0700\",\n            \"id\": {\n                \"$oid\": \"6389987e704c542ac16b83d2\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABYklEQVR4nOWU\\nMWrDQBBFZ7UBuYrcGlaWrqDOAoN8Fl8ga1XptHKaNHF8gShXscBgdzqBwYoN\\naSWl0UJWE6WLmzCpEsjvBj7L2z/Dt/BSFlzqH8yMDfyl9tc5s0h+DzdlVRyl\\njRXJbywQazAxMEXl21XaVj/4j3ia6THVzztw0/YsAWk8JZvBvJg2mg1JfsQW\\nMoDrCDtiPvuzDACZoeX/ugpOi8H2bmfT8p82BWQT/yYUGcl/lIGbbkQWQUO7\\nn/FeyOL0onPaf9/xFjCE58copu337X7bwHkelGNaPl3EhxPjOMT7HDnMTzaw\\nqEtF8vsL1DFw1yHy82HOVWHq+kDjB4hMTwKFTeMxCbtaA2fhiMZzqpGvtJsi\\nSGo/HFTkqT2n8ff9IHAGcgJzaj/YVV4mjLjfXmIJ3GuJ+/0UQ5M4fUrEfsgr\\nwDj45r2vc98P/CEsu0LTePp+EGznpS1Xf6L/f3X+AENxneIQoWWZAAAAAElF\\nTkSuQmCC\\n\",\n            \"ticket_place\": \"Kemang\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-02T06:17:34.569Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392e4094e97da62479a0b25\"\n            },\n            \"created_at\": \"2022-12-09T07:30:17.599Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 14:30:17 +0700\",\n            \"id\": {\n                \"$oid\": \"6392e4094e97da62479a0b25\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaklEQVR4nOWU\\nT2rCQBTG3ySFZGOiy0BshJyguwSEuPMcvYHRjbtM6CYrtQeoZ0lAaHY9QWES\\nAy7N2I0Bx2m6q4LlddvO7mM+Hr/3h0+Rl0+By/cPNCE6LP3qkBEF5XdkSmqw\\nupqsUX6hAHt6vTOAUDRfR3fK3/RD+M//37V6hqDMYQ0Sx1OQkaCaKBvSRfml\\nPFYvowoCecbxc8I+uL3OYIXzrz0wNHgckymOf5oPub8xU5Wi/INQsonmmqOT\\ngbuHvu72UjHjt3ivtIiPxd5XhUlK3L7KTL3PbfAYrn7ViRg5ZrPEwe3L6iVW\\n/TZYhoDrV93Pd7SBaNnHzZ89J8ODZksfyS/C+Qa8HdWQ+9J40l80QmkGE5T/\\nZHhONN5yWeF42nwQcWJ18xv/17rNh5bcrT0bN882H6rVQ2ES7P0DvBdjO5QZ\\nxfqdONlSsA/YfBCLLx4XV7/Nh12oBzRA3k+bD7YpWZQy3L7+tP4Ee1qW4iZC\\nMBYAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T07:30:17.599Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392e43e4e97da62479a0b27\"\n            },\n            \"created_at\": \"2022-12-09T07:31:10.128Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 14:31:10 +0700\",\n            \"id\": {\n                \"$oid\": \"6392e43e4e97da62479a0b27\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZUlEQVR4nOWU\\nMW7CQBBFZ+3CbmKcEmmJLXECOiwhQcc9yAGwU7mzndQxzgFCzpFukSLhjhNE\\n2oWVUiY2zVqK2UBJlGLSJr8b7Sv+7Mx8Q5/LgHP9g5oQW0SBLFbEQPGeZqa7\\ngZmlP1B8a0C3Yt0cSIr1Jx8jWf+in/HNxi+wvHkAHj1zAI3zI8ikl1qjsCEu\\nitdaySVIZ6wPuP9xV14SeMT2kf6jWJK1WDCoUbx0Sq4nnohFjuKDSvWqiney\\nXYr0Y9PKBh23OF5cKv6gZFFSnH867/TvO91MQYHrFwbtFt620Mf1a+Ylf1Jt\\nMpU/v3+v+Z3y9QQI+8TxI2ezTkt6cdwiFP8axaN6IOuSh9j5itzy3MbH+fEq\\nRfdZm2m4xeaDDC0rLaWDzQd+OsahmWLzAeZB805aXJ4c5S/HshhS3D6cdM1o\\nwl5m2HzY5aWfTb0rbD7QLJZhg9yfYz5AwvRiTXHz/dP1F9G9peI/XSstAAAA\\nAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"Bintaro X Change\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T07:31:10.128Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392e4824e97da62479a0b29\"\n            },\n            \"created_at\": \"2022-12-09T07:32:18.907Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 14:32:18 +0700\",\n            \"id\": {\n                \"$oid\": \"6392e4824e97da62479a0b29\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZElEQVR4nOWU\\nsYrCQBCGZxLBNEYthc0lkCewiyAk3T3H5QX0vCadm7O55rJ5pAiBpPMJBMXA\\nlRdiE8F1L63HFXPt3V8sO+xX/DM7/Jq6lwb3+gc1oiHRqNItaiTeVlllTiHs\\nq5rESw3YOZskgJzq7+O2q5pf9DNvLiyl8voNcui7HBTNzxGDGQdZX3BE4pVq\\n9XWUm7660eYz2lbD2EfDofnvLf0J97cig4Y2H4XdwZ6iY0Lir41X4MwV8YnT\\n5hkLGYtcRZLGYzLV5TNLS0bzr69KtnnDuIWUxO+5X5kehODS+tXfERaBWj9W\\nP79/r9lGAWY9zK403lrjPA6uA8PiJP7EvX2yg3N7WNL2Uwh3NbWG6ND82LUn\\nEyhiBa/UfKjC7lpWJjUf1FhY3NM5NR+On9FhgZKWJ50cs/RFy2j70Ml+yfbD\\nIA/J+TB4hqZvP1DzQY4LZ3kh7k+XD3YNJ1Ew2v/+6foLd5uY4jAwHz8AAAAA\\nSUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T07:32:18.907Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392e48a4e97da62479a0b2b\"\n            },\n            \"created_at\": \"2022-12-09T07:32:26.559Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 14:32:26 +0700\",\n            \"id\": {\n                \"$oid\": \"6392e48a4e97da62479a0b2b\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZ0lEQVR4nOVU\\nwWrCQBCdTQQ9mVyF6BbyBbmlIGw+Keoll2riyYvafoD2V7IgmFu/IOBqwKPB\\nXiJks932ZqEwvbZzmoHH7Mybt89Q92HAffyDmpDOw/xGDE4MFJ6qtAihnrZV\\nicJLA2ScuTaQGDvfaTnjx1/s05ss2ACLNxto2yCOoHDzCBL0SnDgRmwUXqnq\\nK2WqQfKTFTpTROL4bz1F9TqA172L47+GrOj659LbbVH4Yu65pyS3guEVx/9s\\nfVABK4Hj9nVH0dBKhblmuH1hm8FzW8lHget/GFX8EpFJRXH36o85myzoCjiO\\nT+j6YhkUieWOUXjnmtXvVd5Ab4Drv4mKTccBz4xxeo7fhqF3HmcCN4/mx0xS\\n50U5P7z/rdb+kBOrBdkZx/+nP0x9CH0Hpx8te2ZDPiNihf3vRcgpVcj/q0Mv\\nKy6kj9OD9ofdlVODnXD9tT9IGUmVEpx+tD/QZK+Pi5//79Yfk1ug4hXg/EEA\\nAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T07:32:26.559Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392e4974e97da62479a0b2d\"\n            },\n            \"created_at\": \"2022-12-09T07:32:39.305Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 14:32:39 +0700\",\n            \"id\": {\n                \"$oid\": \"6392e4974e97da62479a0b2d\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZ0lEQVR4nOVU\\nwWqDQBCddQPxkmqPgTUKfkFuBgLmW9If0PSemJ681NgfSH8lgqC3fEGhWws9\\nNpteFLLZbo8pFKbXdsDDwGN87+3MM9RlGXBZ/6AnxOzlHTEKYqDwrtpBBKdl\\nXx1QeKk/Yfk2kATLr3Pb4uU3ehRxR1g8PYM3D2EOCseHkxmQ1Ek6YqPwSrXU\\nmjxDqM5If2qehVqCxPnfG8SMpPBY+Tj/Ido377NeNC63OP6LMRzHrjWbHnH8\\ns9qD/msEBU5vf92WVirpJsTpZcJkedDICcfNLx9azifD29bFvZdzb07z2ruC\\nAunnjWpERYnlL3D3khXeINbkhyPc/Luw/KjUWtAE5//KHFqmjE2O49Oo1lt2\\n9FqxH/7/rdf5UNkBQP2G81/ngxSpcwgYcn8M8MSqVIRn2Htn25raIfJ+ddFG\\nyM3awe2DzocS9n68anDzv/Ihhye1I7j90fnAloGbYPPnT/efOsWa4mVF/r4A\\nAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T07:32:39.305Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392ed5a4e97da744e097bf6\"\n            },\n            \"created_at\": \"2022-12-09T08:10:02.456Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:10:02 +0700\",\n            \"id\": {\n                \"$oid\": \"6392ed5a4e97da744e097bf6\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABa0lEQVR4nOWU\\nP4rCQBTG38ssaOWmFYIGcgK7CAHtvIcnSNwmjZrEZps18QJ7j+0iBJzOEwjJ\\nJmCpWCXgZHZaFxbetruvGGaYH8M378+nycfQ4DH+wRmxix5W0R41Ej+UqdED\\nc9WRVxIvNMhudh4BBlR9Dh6M3/zn/DYFl8qzFoykKQYgaXoKnIoyduYN6iRe\\nyjqT/iGYyJamP+Fs0Iht8xTR9Cxs00uHC567JN5ZotqYsT/ekvhqU/fXs8qF\\njKYnX/Hy5fUUxiwg8WZiVwCWbqsuIr1/Ozpy2m85Lki8Jfxs95GHfkn7L+xC\\nw+1YYWr8cP9dz3witlC0e/FJy3+Pn9c+W886AYk/aSMn4rBJ7wktn8tucR2J\\nyxhp/VaG0niOc5RAq6/yh4PnsYAT66X8QQR8rNvVnOoPsKvPF2S0+VJhBfw0\\nTIHW/yru0nfcCbG+yh9EeyyVJb5T/YGxGnXq+8ofYKXWlDi/f/r8BYZUoOI9\\npREgAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:10:02.456Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392ee614e97da760b3eecee\"\n            },\n            \"created_at\": \"2022-12-09T08:14:25.918Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:14:25 +0700\",\n            \"id\": {\n                \"$oid\": \"6392ee614e97da760b3eecee\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaklEQVR4nOVU\\nO27CQBCdtQtT2aREMrIlX2ItIdld7sEJwDRpIptUVOBcgJyDjpWQcMcJLBmz\\nUsrYVCBhD5sSJKJJm0z3NE+zbz77NLwNDW7jH2DGOhIESwTTSHwH137E7dTA\\nisRvNCjMTA6BJVR9MjWc5Bf92HX4Y/4G6y241gqWgDQ9exbC0GjKM+uS+Ign\\nve9vIMCWpr9meRUMUgEpiS+X3GVreH1mEa3+aCdT+Jys9ITEt9/rw1eo5nMx\\nafMZd/yuKI7Bo/fvcLBAPeJNw1hJ4otS5O3OBqOg1R+Y3ItAn5wc2r42x0wk\\nwKwQaP16cQxWjTjt0+Z/+ZgFcaiWtaHpb0ouNAPw5fsLEPiGxYLp7JJm7oim\\nJ8Z9Be4YJU2P8gfbPG+72YP8PVb+IDH2K27T5qn8wX4TusWI969i23I5xjyh\\n+52RzwGOVH/oPc28SHi0+soflLn11FXQ+lX+4Mz5YbEuaPv60/gK5c6U4m86\\nsYEAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:14:25.918Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392eeab4e97da76bb96eebe\"\n            },\n            \"created_at\": \"2022-12-09T08:15:39.657Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:15:39 +0700\",\n            \"id\": {\n                \"$oid\": \"6392eeab4e97da76bb96eebe\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbElEQVR4nOVU\\nzWrCQBDeyQrmZOwxkJiAT9CbgpDcfI++QBt78eQm7cWLP0/ge/RmQEhufQIh\\nWwMetfWyQtfpXi0Uptd2YBcGPoZvvvn4LLwui13XP+gB7Ib5rRwsEj7AtR6d\\nvUkTjyS8Nm/1ytsMUiq/nRjLt1/so48ldqh4fmFRpsI7hjQ+EmI9KnV6hjYJ\\nj6jqJeNphBeiPmWgEz0DTdN/LxL2VG6eiy5NfxcXLFmHD73NiqaPdbtp9XYp\\nG3yQ8DU6YTb05yyn7TsQyp2zACCi7bt17OIxqyZM0uY3d8o9xPVJBbR7VWg3\\nHHRnw5ymp5+pQMScZ90RCe8tc9k+1/di26HpfxCMlR6so5Tm/1XJAH0Bksan\\nSlQg+8UNej/M+9abfKhaTUNpT9Pf5IPkU+M3j+YfY/tIjCsEOSfnlzMNAY1F\\niXgpx9sZ9Gl+MPnw6bwMTljQ5pt8YIuY+3af5h+TD/y9MFeg8/+7/RdfYaDi\\nSvae4QAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:15:39.657Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392eeda4e97da773a68e302\"\n            },\n            \"created_at\": \"2022-12-09T08:16:26.767Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:16:26 +0700\",\n            \"id\": {\n                \"$oid\": \"6392eeda4e97da773a68e302\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABYUlEQVR4nOVU\\nQWrCUBCdyReSlaZLQU2u0J1C4GfnOdoTaLpxo/lewHiDXiWBQrLrCQI/NtCt\\nsZsEqmNcKlim23ZW//Efw5uZxzPougy4rn+AEa320TkkaLD4DsUuNI1t0p7F\\nPxqQKOisABVX3wBMJ/jFPCWh/un/CosTyAcqRkA8PQX6x13mPTdos/hEtQgX\\nn0rSiae/Qt2L+6MEtjw99hhVop+mGPDudXrXlV9i/KF4/UXtdU05agZdFt9d\\nWulLrKvw3ny3ekQ9IB9pjTvefpaWi5VQpub1f/uqIJr25wuHdy+IrCRaw2sM\\nvHk9JLGTaYFD3v5zlQ17OFmnJU+/2D9SVWuaMP2JoVVsoDWPO+P5MyKpwJ0T\\nU88lH7Zmamd3/m9xmw/lIXNnY6Z/2nyAVaMjZPq/rdyW3kzmissXe8g3UB64\\n+XAMwAwayevf5oPT878xZfqnzQcIL2bTvHv9aXwGBZ+T4rCnYoAAAAAASUVO\\nRK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:16:26.767Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392f44b4e97da773a68e304\"\n            },\n            \"created_at\": \"2022-12-09T08:39:39.959Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:39:39 +0700\",\n            \"id\": {\n                \"$oid\": \"6392f44b4e97da773a68e304\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbElEQVR4nOWU\\nwWqDQBCGd00gnmoeYEWhT5CbgqC3vIcvUJtePCVreunJbV4g75GbghBveYLA\\nSgSPjenFQMx0rwkEptd2LjvDfgz/wMyvwW1o5Db+QU2pTqlLTjnVULwFGbQf\\nfTqCI4rvNWKL6YATyrH6isWm4r+Yx10E/hjLD66kWIEMCeD0VDTwwtLkZzpG\\n8QBdk04k8eGK0w+6XKqnNGco3pxN2Itei5isUfxBiCp1/HbTcBRvi5i9Z/V6\\nxEIUnydJk+5kq8sH8933j/yeO7ZKcLz8LL0w30OXpyj++StujKnFz94JxV9W\\nCTM6u50WT7h74X5+LOU6f8bdCwFqJwGh28uD/7uafYN87YahY89x/aPSFu5+\\nQSucnkPqWCLzVmDh9lP5QxHtalLWOP3KH1wjPhwdtsT6w/Yt8QQlEdq/5qSO\\n/AK3/yoYxH2amxzrDzUVkMAFt//KH1RCjWCI2x/lD4w40GZI//nT9Q9+vqDi\\nsjlc0QAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:39:39.959Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392f54a4e97da773a68e306\"\n            },\n            \"created_at\": \"2022-12-09T08:43:54.980Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:43:54 +0700\",\n            \"id\": {\n                \"$oid\": \"6392f54a4e97da773a68e306\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZ0lEQVR4nOVU\\nO2rDQBCdsQRSZStlYB0JdAJ3axDIne7hC/iTJk2MnNSxfAL5KlowRF1OILAi\\ngctIdiOD5c22DgTGbbKwxcBj9s3bN68jr08Hrs8/qBFNtEBfC+yQ8LZM7BxP\\nlSErEr5Vd83dEDCk8tv2EjG/ZZ46sB+oeO0CHi71MUganxxHbWXchyelEgUv\\nZVPK0Q58eSHqk9rWwJHY0vTXn5/KKcDm3aXpX1jpGZP956CMSXjn2PTfgnNs\\nsAMJn32Zu3VaToaCNq+2bPRj7b1GPm1eFgs2MWHBif3zua/8U9bo0/7LW6Q+\\nBlnoC5qeGs5ECGyzdOc0f3Y/3Io7Y5490PDYZNYJZOCHNP/kpjOLdiByGp8i\\nalgX9neS/fL+j1rlw/aFM0j3NP1VPqgV06ec6B9ley8aMon5irzvsyizZRFS\\n8W1vpE+wT/ODIl88JnAwbsmHAcQcaf5R+aCtDFknxP5/uv4Gv3Gd4iel5x4A\\nAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:43:54.980Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392f5794e97da773a68e308\"\n            },\n            \"created_at\": \"2022-12-09T08:44:41.937Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:44:41 +0700\",\n            \"id\": {\n                \"$oid\": \"6392f5794e97da773a68e308\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZUlEQVR4nOVU\\nMWrDQBDcswxW5SilQbYEeYE7CQy6Lv/IBxQ7jRtbOrlxFfSC5B3pLDBInwjI\\nkUClFVcyWL5cSgcSJm1ycMWywzE7NzsdeXk6dHn+Qc2Y3pW8jBLWgfCW3OSr\\nDfV7sobwrbo+M++IhSi/yXNqx7+Y5zUcb3/qX9Tamaq9bhNJjM+OcfchHdRH\\nZkB4KZsimFeGJ8+YPlN9eC2OLS8PEL4aObTgmhDf9L/WNltvVykL+DAE9Ryb\\ni7kmmgKbl3z9ZkanQwbyMWOPrtafZDB88pZso3EV3KLvMzlZ0kn5p4/5wUjy\\nqGcHG8L0J3LsftKGZN5j+vv6rvaKwC0x/onhWVO9q1bsCcJ7YbYTTbvnNsYn\\nDxprdCyEbLF9V/mQv3MzRv9X5cNQOZ8cDc6HknqlzyhG972YkfvomEsU71ov\\nORG4Xyof0jqjKAP1V/kwCL1KpKB/VD5oyjxL5wTz/7v1B3SKkeJf/23VAAAA\\nAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:44:41.937Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392f58d4e97da773a68e30a\"\n            },\n            \"created_at\": \"2022-12-09T08:45:01.942Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:45:01 +0700\",\n            \"id\": {\n                \"$oid\": \"6392f58d4e97da773a68e30a\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaElEQVR4nOVU\\nMW7CQBDc9Vmym4DTHwGJF9AZKdLxluQBMaRxg3wmDU0M+QD/SOeTLEGXFyDZ\\nDhItpMKSzeVSEqXYtMlUt7rRaXZ3bix9CQsu8Q9qRNeOR+gptEj8rk45ADs4\\n+kDiNxYoHZszSqq+22NYz37Tzwp6AZXPzsDiRb4CTdNT4KgpoVNW6JH4Wp/y\\nVbUDoc80/csNfIgcKntG4nfKwT4aiWSTByR+tmhzfG3a4TCh6YlOnWc3u19n\\nND3dCNkx7UvFJInfe9JmOFvP5y3a/COsLMWnbjGh6Ul8GxzHchit3+JxXk+H\\ndfvEf77/XueB6F+vm1IZV1D4wlONrHYtfy9p71+F7wefjV2+pM0T54XnGPFI\\n89uX/gIx1kDbr8mH+iXVckPcl8kHaAl76e/uqPlQREP+gIz2vwyEfNsuUqD5\\n3yALBn1PNJKaDxzXaozshpoPxUTxsSb6x+RDNxHGnMT/+6frTz7nlOIe8Wkr\\nAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:45:01.942Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392f5a04e97da773a68e30c\"\n            },\n            \"created_at\": \"2022-12-09T08:45:20.741Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:45:20 +0700\",\n            \"id\": {\n                \"$oid\": \"6392f5a04e97da773a68e30c\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaUlEQVR4nOVU\\nMWrDQBDclQRKFculQZYMfkE6Cwxyl3c4H7CkSlV8cpUqSh6Q/MOdBAar8wsM\\ncnzgMpGrE+R0UUobHDZtst1wwzJ7M4ymTkeD0/kHGPGKK9yxHDUS31XZGEx7\\nYaoPEl9qsDre8HtARtUnu6kf/eIeXXrlT+8nWG+gnyh0QNH07HBiHwv7rkaL\\nxFdKHObhCnzV0PRXWD6n9msOTzS/mO81MJjeYkTT4+R6NFon2Z6R+ByF7Hg9\\np7avSfxetAF8GIbxpfvOsDGLD+8xn6f4RuJ/Qi6dzZbVxP2HrlCVcMO5ovkF\\nQSG1Gt0MaPeOVWzKTjnFPu3/t6yQ0chlJqfpBxR7p5bJkphP46VjYwbpZBDQ\\n8lAJYzYxQkXU0/YDLDauVVzSe4bbfrDDJQQjYn7afpCWz1Mk5r+dcubVidoy\\ncj9YMGyAH6n9sGMFrzyftv+7HwKzTtbE/LT9oKdCf4SS5tefxl8ooZviXoxk\\n6AAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:45:20.741Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392f5ac4e97da773a68e30e\"\n            },\n            \"created_at\": \"2022-12-09T08:45:32.334Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:45:32 +0700\",\n            \"id\": {\n                \"$oid\": \"6392f5ac4e97da773a68e30e\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaUlEQVR4nOVU\\nMWrDQBDckwJyY8spBbIl0AvcXRE4d3lH/ILYaVRZp6S3nQ8o70inA4PV+QUC\\nnSVQGdtpZLB0UUoHAus22W5g2JudG0ZTl6PB5fwDTEjHPYylJoiG4jsqrrmw\\n54bao/i1BqWz8TgQjtWXKV/MrrjHmiVsiOXrDRhhlU1A4fRIMrb2yYCfSB/F\\nV6oqOc05Uw3Sn8SOxCAgNc5/78OXO7p+23g4/4uVsLvm3WRURCh+2tA1nPKh\\nYR9xeQiXul4VjyeBu9dVPvQSCE2Gu1c+hfAQuEGF3A9L3wrfrSlhuP86z7cG\\n35acCZyfN8+jmo9SJ/RmOH+aJFuBI/10iNP/qaDbccmGcVx++oIdYhEQidOT\\nN6w2791XZf/y/g/c9kO+ozYkJc7/735YgL6nyPy0sfe4KBSRC3R/vcTprco5\\nll+A4dRkgMtD2w9Zj7pH44p+CDpFRAkuP20/6IfqPI2R+/80/gLCWqbiwC2x\\n/QAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:45:32.334Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6392f6934e97da773a68e310\"\n            },\n            \"created_at\": \"2022-12-09T08:49:23.107Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 15:49:23 +0700\",\n            \"id\": {\n                \"$oid\": \"6392f6934e97da773a68e310\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABYUlEQVR4nOWU\\nP2rDMBTGn6yCPcVZA04s6Am62ZN9luQADZm6FMvea3yC9BzdYgjEW08QsGNB\\n1jhdbIjyqo4pFF7X9kPLQz/E+6fPwltZcKt/EDPmmKOyklkk3seN321gaeOJ\\nxGsL9jMQI2CSmp84P1yy39Tz7IglledXUAXUa0BaPg2LvcVuehjYmMQj9m0O\\nOxnhlZZ/UTVuqOVwl9H6eQj8Fu/zql6SeNtlOgkn7lOYk/ghRT6r6vn7lpaP\\nLUux2Cj2xiWJv0DQvMSiCLwRbT8TBz7Q106zIr4f8fFQZzan1QtJuteOcHvv\\nh/tv8dFNvDOoeakPJD40/XndDXlwlCS+TfvteeCryitI/DRxohMojBlt39oO\\nASLBEGjzNeZQr4eJrIjzMv6gm7guAjWn+gMUoB4Zp/0vI/tUfcG0/Tfa+/30\\nGmlJ9QcjtEo+I/tD57IOiftj/IFjjzkQ/++fjj8BOw2d4rT1znAAAAAASUVO\\nRK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T08:49:23.107Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639302694e97da773a68e312\"\n            },\n            \"created_at\": \"2022-12-09T09:39:53.673Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 16:39:53 +0700\",\n            \"id\": {\n                \"$oid\": \"639302694e97da773a68e312\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaUlEQVR4nOVU\\nMW7CQBDcNUhHE3BKS8aOlBfQORKS6fyO8AJsmlSJSZUmHC/IP+hsCcnueAES\\nhpNcBlOB5ONyZUAi2rTJdqsbjWZ358ZQ52XAef2DHrEl42Nzn6JBwrsqYSaz\\nHKZ2JLw0oK4GixFgTNYXJm70i3mKLv7M971vnMDf+eiAoukpcCDHb/bwiCYJ\\nr9RB3IRl7KsTTX+FKmZHJ4UZTc/UQzO/ewwwIuHt16VeZhbDNibhy11vNamk\\n07PbJLzFObRzd5xcm++S3/DKiBWygxsa/2fr4T1sTOZrGj/j1Ro5VE8u7V6W\\nuRRDT7oZ0OaFfc/m6BfYpe1/K1vNkbfATND0y8irIbdeQqI/2S0X4N9rS4xI\\n+PrZ6+N8ESqiHp0PZSewzPzK+2Wv88E6pXpkon90Pgg81ByJ/tdVz1hZHVYx\\nFV9u0j6A2FPzwVaBUIFP49f5AB/6yyRE/+h8gDBzp7Cm3etP91+JC5bif894\\n8wAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T09:39:53.673Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639303e54e97da773a68e314\"\n            },\n            \"created_at\": \"2022-12-09T09:46:13.270Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 16:46:13 +0700\",\n            \"id\": {\n                \"$oid\": \"639303e54e97da773a68e314\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZklEQVR4nOVU\\nsWrCUBS9NxHilNhRiEkgX+D2BOH5K+0PtNHFqSabS41f0PxKAgGz+QWBRIWM\\nTeyi4PM1jhYKt2t7twuHw7nnnXcUeT8K3M8/2BG7OM066wQVEt6WMYRef6fJ\\nmoQXCqhyqa4Afaq+S7Mop7+4R1iZbVHx6hWcFwZPIGl6SpzA51L4Z+yR8FKe\\nDjorgMsr0Z9MxYkjUdD8dz+8VkwabVyi/72tvdLGj97hnYRPYSiaII1C80jC\\n8+sWgolbDxPavYk/3NQsR4MT752FJmydxamk8ecDz8G4aLo27b2cYwZrUH2W\\n0PxUm1Oqs3EUuFMSvv/WbZ3Mdyy3aPwzeXgedUDjPi3/68SJNheJJU1P8cpF\\nfa4epPkD37e97Qe5MEzIKpr/t37ABmtGzE8b+05j3PSvqP/dNOLKYnuf3A/e\\nXAThgJaHth8K/czLEb0fqlksLI60/LT9YOravomJ/H96/wJqqaTiWyIZEwAA\\nAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T09:46:13.270Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639337bf4e97da085c7567d8\"\n            },\n            \"created_at\": \"2022-12-09T13:27:27.532Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:27:27 +0700\",\n            \"id\": {\n                \"$oid\": \"639337bf4e97da085c7567d8\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABa0lEQVR4nOVU\\nO2rDQBCd1RrWTfwpBbJl0Am2U0AgdzlHfIHEqtxZdppUti8Q5yoSGLydTmBY\\nWYKUkZTGAkubbV0EJm0y1Q77GN68ffsMdVsG3NY/6AnpdiqR72JioPC2iswN\\nvy+YKlD4xoC8AhoACbH8rm8PcfiLffJZTcdYPG3BA2aeQeH4pGQK5HUCNRmg\\n8Epd6JhL8FWL1EekoZjckQanfwd4Np/Kl6OD099uEw9cp+CHPY7PwIV5dNgl\\nXoXT/5GkA9G0PMbtS7cX62npkL6P2/cUJNkwMlWJnA97DorIKvFx78VC0ZTH\\njlrEOD3NwGVjuL6v/ADpt6Qpava5AJz+ANwOfWstfry/7ZtlV4I4FZDi+GQr\\nNVou6FBZuPk6H+Q6JqH4wOmv84GWkXx2LZx/tO0nPddTJN2g//t2mq0uVxx/\\nXeY5SUd9B+cHnQ+ZHcFXKXHzdT7kM263jOD8o/PB6jF9RubPn+6/AcVln+Ky\\nLsmDAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:27:27.532Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6393386e4e97da085c7567da\"\n            },\n            \"created_at\": \"2022-12-09T13:30:23.040Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:30:22 +0700\",\n            \"id\": {\n                \"$oid\": \"6393386e4e97da085c7567da\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaklEQVR4nOWU\\nwWqDQBCGZ91APEWvgU0U8gTeIgT0WdIHiCEXT80mp15q7Qu0z9GbgqA3nyCg\\nKOQY7alCdbs9plCYnlrof1gY+FjmH2Z+RVxLgWv9g5oQtQ4zosREQfGGiPqt\\nS5uxaFB8r4BxiKY6EI7tr/a6xPuBH1tzIcTydIBqGDscBK6fkrizXdQ3HdFR\\nvBBv58BKJo4YcPPRY9ZqhqaauP4X5b4MlmQXwSuKr8O44nE1QBmg+OlBmORN\\nfl5x3Pxv46me2/fbHscnwi/WkOoZw/VPeU413+Zghih+dbRIA8lNSnF+ay+H\\nxzsnsOpv/H2pu7n1vvET4RY4fsHz0XM0O0QrHF+QlgmVhfkJd1/1Rj1Xbbq1\\nTdz/jIh+nskXjth8oHsXIKsn2HwoiBjBknJsPjAPThfS4/xKzT7v3TFw9yh1\\nbl+oiJI1Nh9OcjmPHXvC5gMTfnlxkfsj84G2qfGQStd/If9/tf4AobOf4po1\\nRVUAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:30:23.040Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6393387d4e97da085c7567dc\"\n            },\n            \"created_at\": \"2022-12-09T13:30:37.407Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:30:37 +0700\",\n            \"id\": {\n                \"$oid\": \"6393387d4e97da085c7567dc\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZUlEQVR4nOVU\\nQWrCUBCdSQTd1Oiy8NsIniC7CIHkLj2ApitXNdaNGw29gL2KHwSzyxUSDWTZ\\nJG4iNJn+rYXCdNvObsjj8eb9l6fR7WhwO/9gR+yhP0FNosbCm7QX/Vi8dKlg\\n4RsN8uFefwYMuPqScp4Gv7jnPojMRy5eb6Fb1vIExNOToqf4HbjigIUnqjPy\\nz4FLLdOfSOziZoMNz//OnZ8X1mh1HPP8T3DdDI/Hj8lhx/OzsmnhNQPXqXh+\\nbnp4ArO9St69cCEzXGer0OXd+7DoSWPetBaTn5a187R0qtjlvVdnJhPyzou5\\n5PkpdnY+pM770n3m3UsG9COY2cD0HyxRWeI1+vH7912Fx8umXsrTk/j1CMPk\\njQSPX/VDMvUciHKe/6ofdL2UhS14+VGxxwIcwnTL/d8FRJlRf/L0q9EHtgiN\\nMS8Pqh9kER8uZcLjV/0g4Oq2XeTlR/WDvnUVObN//vT+BYyJoeKHkqVTAAAA\\nAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:30:37.407Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6393388f4e97da085c7567de\"\n            },\n            \"created_at\": \"2022-12-09T13:30:55.802Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:30:55 +0700\",\n            \"id\": {\n                \"$oid\": \"6393388f4e97da085c7567de\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaUlEQVR4nOWU\\nMW6DQBBFZ1kkaGLTWsIGySdIRyQk6HKOcIHYuEnntatUa3wB3yOdkZBM5xMg\\nQeAAxmlACp7Q2pKlSZtstSO9nf2zO/MVvF4KXK9/EDOmqxvWiZgpJN7CfVbu\\nbdDwROI7BaZjn4fABFVfWzeF/EU9dqRZBpXnF0heGASAND0F81126ETLDBKP\\n2HDxyIWHF5p+1DND62Q6Dkl8FTnqLK02b7Aj8U+LlTlwvoP4IEj8QThV1Npb\\ndAMSP5Ipzv0c9fxOfbcxLmH5XvW/RuNtSNnQd5d1LEl8/lWXqybBZ/dM4tUH\\n3Tyn5hmSAa3/SxxLR5vEHm1eql2cBzAKvULQ3vPkcXnkqw+L2D9RaoMDr3pB\\n01OenGKoJ1sk5u/9oT8CkFZ37r+Je3+wIXZnjrmm+kNraPGQwYw67zxs+/zZ\\nhMoXF41PjlNB9QdYQyba7JPqD5YEXqNK65/eH2De9Hui//zp+Ac5mJji+3CS\\nXgAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:30:55.802Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639338e04e97da085c7567e0\"\n            },\n            \"created_at\": \"2022-12-09T13:32:17.047Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:32:16 +0700\",\n            \"id\": {\n                \"$oid\": \"639338e04e97da085c7567e0\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbUlEQVR4nOWU\\nvWrDMBSFr6yAsjQ/Y8CNDH6CbC4YnK3vkT5AYnfxFMeZvNROXyDvkS0GQ/0S\\nBgcbuuZniSGyqjWFwu3aarvoQzq6Ovdo8n5pcL/+QU1It4bcOKdEQ/Fc7kd9\\nvxgzeUTxQgPzFJkekBVa39o6tL94TzafUg3L0xbEOC+OIHF6DmRqv+xtaMgA\\nxUt5zaQPW0e2OP3rlA93pboIp+cx8OuHLsipvcGd7ybCc+pFnv2w/62upcvD\\nkNKdg/vfapjA/Plpxcozih+9+WJ4KpdYP3QWuRn0YdPccPpva6toJ8Y8MHC8\\nscw7JCqh+YhR/Kdncdc3Bwzb/01axFBeooOH43tO5z0hwoUlbr7CUJdupeU6\\nTo88OvUMbCIp7n9VPvAVKyFH+lPlQ5rs64XFcfOi8sE4dSEhMMPOu76diPCa\\nbdH5cElozAycP1U+UOE+BqTB9Uflg3iNqurKcP5R+cBjR+8xpJ//dP0FBTCc\\n4nrNTEIAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:32:17.047Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639339244e97da085c7567e2\"\n            },\n            \"created_at\": \"2022-12-09T13:33:24.640Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:33:24 +0700\",\n            \"id\": {\n                \"$oid\": \"639339244e97da085c7567e2\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZklEQVR4nOWU\\nv2qDUBTGz/EG7JTYUbiJvoKbQyBufY88gaaLS6u2i1PiE+RZFAJxyxMEYiM4\\nNtolgje3dmsKLadre7bD+XH4zh8+RV6HAtfxD3LEG6idsslQIfGGTHHS6hNV\\nnki8UODwFpdzwJCqjwXBLPzNPJgefqx/ztkFxmFeTEDS9BTocBem8xY1Ei/l\\nuVx5VTiTF5r+Gjs3b7UMEho/tCtjaz7c4YLEl8nOrH1obBaSeP1kcS+tbqNu\\nSNPzvNpAxsH+rv4lH7iW0NRCjPCFxB+XuSEcjimxv46BuD+zhSVp96pkZCYt\\nrFWgzWtGweZxty+QuP92FfPGqpYq8d+Y51VarivkfQaxEP4AMtMl8R3Mpm/b\\nYy1LWv/eH1jgQJIT9fT+AOt2fLI5bZ+9PxRhfhwh9f8/RrCneN7Q9PTBoni/\\nBN5Q/aF49QfNzqT17/0BnqCTPvF/en8w5JbJ9EC715/O3wFID5jix9wCHgAA\\nAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:33:24.640Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6393394c4e97da085c7567e4\"\n            },\n            \"created_at\": \"2022-12-09T13:34:04.091Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:34:04 +0700\",\n            \"id\": {\n                \"$oid\": \"6393394c4e97da085c7567e4\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbElEQVR4nOWU\\nz2qDQBDGZ13BXhrTo2D+QJ6gtw0I+izpA1Q8eSmu6cVLk80L9D16UyjorU8Q\\n0ETosaa9RIhut8cUCtNrO7dhf8zO7Hz7afI8NDiPf5ATckE46MuMaCh+IlOQ\\nHviGbFB8p8FJtKW6iGP7M3aGLX4zzwDAx/K0B1hCNwaJ66cinnVIpouWDFG8\\nlMecs5y7ssf1Lwr7knSrVl+i+FHDamA0KEofxdeSdMPCGoO1QvGlcJ2PXPfd\\nGtePc5PsG6BBRjmKz6OweghtwewBrv4mprx9vjOrAMVnb6H9bsD9E8XNq95/\\nKtr5yrV/OP+W055BlOS7rNqh+Hm83pJwHnkOrn65DqlMS2HscXqbBcX0YL42\\nLcHprYyOtQCHSMDtV/nDyTxkvEDuS/lDV3mzIasXWH+ATQK3hOLmVaFLb3uV\\nWzj/UbHvGe2vkfr88gfxMgqM+hHrD13DpOkh9aP8YRKnEKXI//un80+/8Jri\\nE8l/AAAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:34:04.091Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639339644e97da085c7567e6\"\n            },\n            \"created_at\": \"2022-12-09T13:34:29.008Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:34:28 +0700\",\n            \"id\": {\n                \"$oid\": \"639339644e97da085c7567e6\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaElEQVR4nOWU\\nsWrDMBCGT5YhmWyvAdEY+gTeVDDYW98jfYA63lO76ZzgPED7HtliCFgvUbAT\\nQdYmUwRWVHVMoXBd20ODDj7E3em/3zHX4cB1/IOckKE7r+0hDoofmw3MUsgG\\n5gPFawf6VWPvpMTWF54iVv2iH73w2wzL0wvIE3Q3YHD1dCRl0008USRA8cac\\n29f0UCbmgqu/EofjWi+VO0fxLkS6KEwuvlpG8KoYjumzfIPREsXLqYFZwbJE\\n4upJSuFWQPKaljg9BLzPBA0481D8Ia/dl7PSfpfj5pnx1hOUrimuX10MY1DS\\nS9gP733L+5WB473e1d0OxYdPQpdRbNIY9/4+51sPmiDZ4/QWVoKdBMtqgtNb\\n+8Rv7QoQA7j/tf7wTpsYBPK/rD/Qkm8rLidYf5CeYI+E4vq1cZcr1xuMcP5j\\no1kUfRUh9Wn9gU1U+NDYlUH6g73UforUj/UH8Bs7JeT+/un8E7FLm+KflCi5\\nAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:34:29.008Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63933ab94e97da085c7567e8\"\n            },\n            \"created_at\": \"2022-12-09T13:40:09.533Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 20:40:09 +0700\",\n            \"id\": {\n                \"$oid\": \"63933ab94e97da085c7567e8\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbElEQVR4nOWU\\nwWrCQBCGZ5PAetF4FWIT8Al6WyEQb76HfQATT7ll1156aWJfwPfozUDA3PoE\\ngY0N9Gr0YqBx61VpYXpt9zbsx/IPO/Np6vpocH3+QU1Ix1k2ziElGoq31aZ4\\nnhScqj2KbzUYcapzIBybrxCCxL/ox6hDvY/l9TNIsh3sQOHylGTi+jlAQ/oo\\nXqkTAAPw1BmXX3WyLpG9fLhA8cZj7R4YJCGsUfwgMiVQY9ZsOYr/EDWsU7tP\\n3RmKt+amcdxmRMgf+rup0ztmx40D4OB4T4iiDJszS2PcvHFG7ScaTd0Dipe1\\n2XDWLCDrofiROhk+ddaph9uXapWraKwvaMlx/xUEDuSleLVx86OrpCIbaz4p\\ncXkksNaMsheFfP/iB3kUHs+r7+9v64sf3O4085m1xPrhfX9vJQR87L5XK2qY\\np+IO7btAtLu3Ecf6oTVDezgudlg/WA9JFSgDNz8XP+gx+wSsf/50/QVpCZfi\\nq6ujHQAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T13:40:09.533Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639353b44e97da085c7567ea\"\n            },\n            \"created_at\": \"2022-12-09T15:26:45.021Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:26:44 +0700\",\n            \"id\": {\n                \"$oid\": \"639353b44e97da085c7567ea\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZUlEQVR4nOWU\\nsW7CMBCGzwlSsjSEESkmSDwBW5CQzNb3SF8gpHsxnTpBnoBnSSay8QpJbImx\\nwIQlEtftRqVK17W97ZRPzn++37+l78uC+/oHPSFub7uo/YJYKD7UOTzlk8bR\\nJxTfWlBlqjI/4lh9lMM8+8U84amsEixvd1CP2HgHGqenJosgLttGER/Fa33d\\ncyWB6Q6nPyuDh0fwVO8VxcvLlKZTnX6NjOBpdzhypx5Fww1Oz3bZDtaQHCRO\\nj3h+u7044/PM5jg9nNmrZZVFgYe7z1NBU7O1A0lRfM9jx01J7Vwg59Vua7Gb\\nFwU/fP/WK/5J2k1RNyh+MliLThnzz3HnV3FU+6XurwTOb5S6E85kUhCc38RZ\\nw6WYrTXg9mvy4ZaA4CVyXyYfpAfEj2SMzQcg1/Cd2Lh5Tc23brFxhrj8MVUB\\nG2dTpD9NPshYCbGXO3Q+kP2wv0D6x+QDeGDrHPl+/3T/ASuQmeJZ296SAAAA\\nAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:26:45.021Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639356354e97da085c7567ec\"\n            },\n            \"created_at\": \"2022-12-09T15:37:25.867Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:37:25 +0700\",\n            \"id\": {\n                \"$oid\": \"639356354e97da085c7567ec\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaElEQVR4nOVU\\nMWrDQBC80xmkJpZagYwFfoE6FQb5Lc4DYjuNulySxk1kfcDOO9JJEIg6v8Bw\\npztwmThuLLC1uaRzILBpk6l2YVhmb+fGgnNY5Bz/oKfU6U2p9Epqofh9KDQ9\\nDGob3lD8k0WUZ5uacqy+XkuC/Hf7iAmWz1rCZmVnRQCnR9KRz22/bqiH4gMc\\nxMVUkwRanP682t7ORbfp3OHe8y0evif9WfW5MoIfLhyZVbKX+hlOzzg6kiac\\nrDVOz/PjXOeJ2D8xjpsPaQi078VBF8e/nB/3cDq5dIbjL9MBJ+F9oXD7Mr6W\\nbbnN4uCHed/7/S6AtKlLWaP4w665b9ExBW7+hsdHGCkvUTi/hTtHXhfkilKc\\n3xTAcOmGFAjuviYfxDja8Ap5r698WJA81mNsPgR5xF4pw+1rMHhwwpXt4/LH\\nQEwPAYmQ/jT5oBduqV70Cp0Pape4I6R/TD6wzBY3BfL//un+A/jinOJ9Y1IG\\nAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:37:25.867Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6393564d4e97da085c7567ee\"\n            },\n            \"created_at\": \"2022-12-09T15:37:49.822Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:37:49 +0700\",\n            \"id\": {\n                \"$oid\": \"6393564d4e97da085c7567ee\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABbklEQVR4nOWU\\nz0rDQBDGZ7JCerHJtZDaQJ8gtxQKzc3nsD6AbU6eTNSLlzbxAfQ9vCVQaG59\\nAiF/Fjy20UsD2a7rsYIwXvU7LBn2R/iGmf00eSwNjvUPasROP8DCTFEj8QOZ\\ncNwPS13uSLzQoNIy9Y0h1d9oEbTxL/rh7409o/LsABbor2cgaX4K9GD+YE8b\\nNEm8lPsqdFYwkQea/zjjkWd3m5M7Et8PHStYD/wsn5H4VW0o5/nTdW9J4idR\\nzbbIZxtO85OWm8Z04eOFhSTeih3mq9O1urR5LTciigphoE/ieT0f+o59n1S0\\nfmEe8dMOdF3rh/vvdezml/t2mhYliR8tEKTBpTem/b+6ldZjPTD1irZv9gUW\\nod7fNUjbt9yQY0g5SqDNV+XDWpy3kBHnpfJBaO7QdPmUmg8sSlZXyGj9Ko22\\nHdtY92j5o1Sx5GvrQmo+CDEXpc6fqfnAWPRmeMT9UfkAN24bJMT3+6frT++6\\nmeI4IXBqAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:37:49.822Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639356884e97da085c7567f0\"\n            },\n            \"created_at\": \"2022-12-09T15:38:48.876Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:38:48 +0700\",\n            \"id\": {\n                \"$oid\": \"639356884e97da085c7567f0\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaklEQVR4nOWU\\nwWrCQBCGZxMhOWmugjGBPkFuBgLJre/RF6imFy9ttn2ARB9A38NbAkL25hMI\\niQpeTU4KXad7VVqYXts5zTAfu/8uM7+Gt6HBbfyDmjHTtgpoC6aReAfzcgcy\\nNfBE4qUGweJR14Bxqr712GPXX7zHtgAtKq9fAZtS7gBpemoW2bFw4cIsEo94\\nhi5UEOKVph/NCi5uV9gxibe5pyvl2RSWJP74ktWTaL9flZzE91MP5ujONsET\\nTf9MwJuQSVT90L+rdT4KwFO5S+OLkzjGxjpp6pTEB2245QIwGrQkvrRE2Js6\\n6oouifdPXp1e3GUR0vblmJhVC+s2rDnt//nIyXL/feXQ5kcfChkbh2ezpump\\nJth59T/nSDxf+cMnyw0uDt/372vlDwbfDMajwQfVH6pmInsMxtR97w9Fieft\\nkMqrkZPx5oFT/eHAsmDhb3dUf5DJdN9ghzY/yh+cJlc50X/+dP0F8qOe4qs8\\n+TEAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:38:48.876Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639357f44e97da085c7567f2\"\n            },\n            \"created_at\": \"2022-12-09T15:44:52.695Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:44:52 +0700\",\n            \"id\": {\n                \"$oid\": \"639357f44e97da085c7567f2\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABa0lEQVR4nOWU\\nMWrDQBBFZ7UCuYmlVrAhgpzAnQwGq8s9kgNEcuXGlqI0qWRfwM5VVhDwdj5B\\nYCUtqIwVN1Yhr9W6CEzaZLqBx/L/zsw39HUZcF3/oCdkYKatSnNioPg7zdlN\\n4C0tfUDxnQEytGQKJMHq86Blv/FTUA4hlqdngMWDuQWN01OQgB3f3LIlDorX\\n+iR1VCdTfcbpXwuaiS5rzRT3n+XIS309EzJE8QpEp3dqM3cz3P/EsWzGbrNS\\nOD0AwkrAa8Y0QfETu2HvnDo+G6L4T2J3UaCWezJD8aZ9qpsVvPIK55d953IT\\ndZnPfvJ33cvFvDsIWuZFieLvjb131G0cTJDvx03lCOpMK9y+ec2gv0cV5gS3\\nb9LW5IUzogE33z4fqq+oSwRyXn0+uJR7a189YvNBDUE+E4rz29e0sOvMcnH5\\n09fHtr11Rsj97PPBTSz5tFNbbD7UM3+yCpD70+cDi3mlOfJ+/3R/AbRJouJl\\nSzKoAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:44:52.695Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"6393586f4e97da085c7567f4\"\n            },\n            \"created_at\": \"2022-12-09T15:46:55.998Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:46:55 +0700\",\n            \"id\": {\n                \"$oid\": \"6393586f4e97da085c7567f4\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZElEQVR4nOWU\\nMWrDQBBFZyWD1ER2SsOCBD6BOxkEVpd72AeI5TSqosWVK69OkLNIEJA6n0Ag\\nEYFLO0ljgZXNpnQR+KkSyMDCDjx2/wwz31DXYdB1/IOcMbsf2oM0ZwbEuyqj\\n93O9sNQJ4nt9FBsLYgLWF2XtT+qxhEUpypsfVIkp16IwPQ0LA9p7q46NIF6p\\nc+t0xW6uPrD+jHJ3mHBpe5j+gYrrRcceMnqDeB5Jj0ktptlB/GHt50nYrOlF\\nQHyXMFNM6SbqMX7iqvFtwdOSY/qJcu8x/5qHFOKrKD6wO1pmE7BeJauTHzh+\\n+93/1zmXsb4USVhjvLfcBo5esyzA+DrVSrog3VfYfjVH+7Ip69eZh73vyrOl\\nsgFTtEH9YSysC5Wtg/pDkUQt+aZA/aE35ezIeqxeHZMkNndzF9tHHdwpdf+f\\nF7A/rKe90fEn1B9Mua3vQ3B+tD/Qam7Kgq/+hP//av4JSUmV4nSS9jIAAAAA\\nSUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:46:55.998Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639358964e97da085c7567f6\"\n            },\n            \"created_at\": \"2022-12-09T15:47:34.285Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:47:34 +0700\",\n            \"id\": {\n                \"$oid\": \"639358964e97da085c7567f6\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZklEQVR4nOVU\\nsWqDUBS9TwWd1DVgqtAv6PYChWTrf/QHWtMlS4luXRrzA+23PCGQbPmCgEah\\nazSLgub1dWsKKWdu7yAcPBzP9VyOJs9Ho/P5B5gxiyrLqFOmQXxfiuGibV1T\\nHiB+r9Hq2BjqQxHqz7O3X+L4Pskk+PX9d6yfyGBN+U4S85OziXe/Gexb5kJ8\\nKZsyGa2jsTxh/iuWhWLgprTE8rrit0TG8x2bYn6KpHid6VOuR5gf+0Yl1btp\\nZ2P5MsfXEz9uLun9wAbxvB/teoftIb5np3QUZiwyTD8j3tmcau5jeRFty9hq\\nr9TiEN8squtYmDkD/38nnV1kDhZj8N5oyT2bF/rLRb/n2KCNmU8COQoeMT/z\\nhpZpFsoS01f90Ffr3N2AflQ/eG+hf1BboP3wEVHuMPD+1WThWk+aFeZHjZdY\\ngXrWaD/0T6KrtwGmr/qhfJgN5zPwflQ/+IkopMiwvP40/gRGBZPiWP9O+AAA\\nAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:47:34.285Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639358a64e97da085c7567f8\"\n            },\n            \"created_at\": \"2022-12-09T15:47:50.394Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:47:50 +0700\",\n            \"id\": {\n                \"$oid\": \"639358a64e97da085c7567f8\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZklEQVR4nOVU\\nMWrDMBT93yo4U5s1ILeGnsCbDIZk6z3SAyRxli5t1HTJEtUn8FlsCMRbTlCI\\nI0HGhE4NOFHVMYXC79p+NOjDk3hP/+l59rw8OK9/0CO2AozNtESPhL+xxVZB\\n+OTbPQl/9GDtdlNASeUXj2fNr/QMwQypeHYCA4LnYGl8auxxWAWbA7ZJeGs/\\ntBJb2bUnGv+sco9zVIeLKQkfjB7gsWXTaj2k6d2XdQphDh1Fm5fshhDVu4mh\\n8QGcMQXNe8kkCb+U0VGuWFvwSxofVXH3PqcVpiT8rdddTArzUmia3s4cb1Jg\\nSvAf9H3r9djW8xj6Zb0h4UMoWeoHEhLa/W9KhNmhyXxN81s4aDUgtrsYaX7T\\nzzYcFQlaoM3X5cMaKreI83L5UEsf28L0qfkAOfABMppeV0k/0tLv0PLH1SKD\\n4Doi+tPlw9eR+6XJqfnAdnfJa4/oH5cP/KrQtiD+3z/dfwKMvJPi47KjSgAA\\nAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:47:50.394Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639359f84e97da085c7567fa\"\n            },\n            \"created_at\": \"2022-12-09T15:53:28.392Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:53:28 +0700\",\n            \"id\": {\n                \"$oid\": \"639359f84e97da085c7567fa\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaklEQVR4nOWU\\nsW7CMBCGzzFSuhRnjQRNXoHNSJGSjfeAByANSzcHpk4JT0Cfgy2RKsHWJ6hk\\niKWMDe3SSBg3K1WH69redvIn67/z798y12XBdf2DnpCboRgTpyQWivdModZA\\nG9s0KF5bIGeFXAFJsfoCMwl+Mw/NtxBjeXoBLRhswOD0HEgEH4U+tsRB8cZ8\\nVmn7DKG54PSv9wDc77e9FYrvTUeERTTZyxjFt4KdY2jvwM1QvP908sGum1Dh\\n9Kg5q1MIToSmuP0k3PW2pcMHfZw/s7J+u/EuLyRB8ZXDz8RoWlS4ed2k2z/U\\nGR/8fP69rxs+ZFEwLQ9HFB+wx2qx1CIKcPfL/AFuhVyHFc5v/izXaenHJcH5\\nTfa5nYAkBnDv2+VDmxua7pHv1eVDfT8+OFxNsfmg8xzmhOLm7SoUYy+zXVz+\\ndPW6KNT7COnPLh+UmejlTm2w+eA1I8oipH+6fAC2G4gC+X//dP8FJdCY4lmH\\nFsgAAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:53:28.392Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639359fd4e97da085c7567fc\"\n            },\n            \"created_at\": \"2022-12-09T15:53:33.524Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:53:33 +0700\",\n            \"id\": {\n                \"$oid\": \"639359fd4e97da085c7567fc\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaUlEQVR4nOVU\\nwWrCQBCdzQp6S3sU1ibgF3hLQIg3P6eak5eaWC9eqvUD2v/ozYCQvfULCtk2\\nkGuiFwNJxm1vFgrTazuwh2Ufw5s3b5+Bl2XAZf2DO2MdxlxlRMwg4S3ciWks\\n5m3MSfhan43LDWAhld8HrlT+m3mKsXVDxfMG7O1OvQPS+Cg2qnMYQsmuSHjE\\nU2bOeOhhQ9RHdsOyfmA1Tf8WTjnGsIz7NP21mCl2klt3/0zCiyKA5c7e4vBA\\n88/1qrsexE0Z0eatYJAe2j1merR57YkU86gKCkXrnzzN4hC4Ly3avloHad87\\nvSCIaHryzemtkZm18HwSvutLsRhXEwdo+sPdDL5+5U/v3/n4ryl7qSagaHwS\\n8+Tlnt6voPXXTPYbNwWZ0fTX+VA3kueOoPlH294+Yhkwtab+dwGR3kJF4/9Z\\njw4zzT7NDzofEhxVxyKh9df5kOGqNW8zmn90PgjwdPgQ8+dP389ZG6LioLjS\\nUwAAAABJRU5ErkJggg==\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:53:33.524Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"639359fe4e97da085c7567fe\"\n            },\n            \"created_at\": \"2022-12-09T15:53:34.578Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:53:34 +0700\",\n            \"id\": {\n                \"$oid\": \"639359fe4e97da085c7567fe\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABZ0lEQVR4nOVU\\nMWrDQBDckwxyJas1yLHAL1B3AYH0Fn/AilI7kpwmla08IM473FmVr9MLApLv\\nIKXlLoKczpfSgcCmTYZrFoZl9nZ2DHUNA67xD2pChoOCEackBoo/VXuZULO1\\nVIviSwPqxS2sgGRYfYHNPn8zz7tBIcbyzR5kvpE3oHB6GhK5MXjzjjgovlIf\\nh7UvIFQ9Tn/Bvp7dDVYo/qT1XZXyhNUxil/nI5nn7hbGaxTfys9Wmoo4FDg9\\n8MC6fOeeiZkh/UBnSeUV1LVx+zqNRExlX5EEp4ec4WVYP+45bl53y7r73WxN\\n3R/6favftPl72hzL5ojie8uhKCqeRgGuP09CfV9QhBznt8n0KbBLLy4Jzm+8\\npWYSAlGA26/OhzLruowh96XzAZajmUPFHJsP8LyXJ2Li5tUIFpF4PYxx+aPB\\nHb8GH+lPnQ9NVnlzS2yx+TDN/HoTIf2j8wHuDvqXkPf7p+sLMxea4p3+tjwA\\nAAAASUVORK5CYII=\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:53:34.578Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63935b604e97da085c756800\"\n            },\n            \"created_at\": \"2022-12-09T15:59:28.102Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 22:59:28 +0700\",\n            \"id\": {\n                \"$oid\": \"63935b604e97da085c756800\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABaElEQVR4nOVU\\nO27CQBR8ayPZFZByJRMjcQK6LZDWXe7BBWKgSZOwJg0NxifwWewKd5wAyZ+V\\nXMZJGizFbDYlUYqXNpli5acdWfM0s2OoaxhwjX8wE2KTZdvbpMRA8V2VmALy\\nJ0s1KH5nwGnk6W8isPp4Cc7mN/vEAD6Wb15AvmXjGBROT0E8+nroypYMUXyl\\nztXAqwVXF5z+KINB0gltAc6v9aKnFm6Y5T7Or+ZIV/vCYDRE8fPncxUyUAOJ\\n09O9kKKwq+ArFRh+j5z5bUsFc/o4/cNj0fDxo04pzq+GVTfBwUwq3L7uzqaL\\nBxoy5+f77/NJTK1LJudpUaL4E3NLl9Zk7c1w/8/7PI8ZRLzC5W1UpvI9AT8l\\nuLxVIedhSwMFyLwROweoRYb1SyVyDh8R0yeyH7rdnbwnJm5fjVmUzfoWxfWP\\nRj6fateQ+dT9UAfbenWQMbYfILacvYfMj+4Hx2ewTpDv90/Pn8Kim+Kv5EwN\\nAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T15:59:28.102Z\"\n        },\n        {\n            \"_id\": {\n                \"$oid\": \"63935d884e97da085c756802\"\n            },\n            \"created_at\": \"2022-12-09T16:08:40.772Z\",\n            \"date_checkout\": null,\n            \"date_entrance\": \"2022-12-09 23:08:40 +0700\",\n            \"id\": {\n                \"$oid\": \"63935d884e97da085c756802\"\n            },\n            \"price\": null,\n            \"ticket_image\": \"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4AQAAAAARHwt/AAABa0lEQVR4nOWU\\nvWrDMBDHT5YhmdysBrUx5Am6KRBInsUvEJMuXlrL7uLJzgs079EtBkO85QkM\\nTizomA8vMdRRtaZ0uK7toeXQj9Od7u5vqFsz4Nb+gU9I31wWZpQRA8UP1Zq5\\nUL301BHFdwbkb76jHxLY/O7D+DP6RT008B0Py9MrdEeQK1C4fHZkxprY3rdk\\ngOKVuuQrvhFTdcXlvyzood+J1oxw/NwfD/goKSoPxTtR8RHGHfHtBMVXHmcu\\nV6Incfk4VgbpzCExFbj4MM2tLAfOLBRvNmH3pOC5Txa4+MqfHsbsdV3j6mWr\\nbZmmpsXZz/fffdlcRmRWudluj+InuliPT0AfFF8eArBApnc1bt6cc8aa9/LY\\nEty81akyAUahAlx/tT60SWGLAtkvrQ/yFNABly5WH4aihTmhuHq1kYdtmfRs\\nnP5oqxdcnh+R86n1wU5jIBstEUh9ADXWK4CcH60P9KT0LyH390/7X01zm+Jq\\nY0SSAAAAAElFTkSuQmCC\\n\",\n            \"ticket_place\": \"BSD Mall\",\n            \"type\": \"car\",\n            \"updated_at\": \"2022-12-09T16:08:40.772Z\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
